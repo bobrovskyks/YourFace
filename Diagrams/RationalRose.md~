@@ -2835,7 +2835,7 @@
 			    y_coord    	15
 			    Nested     	TRUE))
 		    (object InterObjView "Camera" @108
-			location   	(2369, 325)
+			location   	(2284, 303)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2848,7 +2848,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@108
-			    location   	(2369, 325)
+			    location   	(2284, 303)
 			    fill_color 	13434879
 			    anchor_loc 	1
 			    nlines     	2
@@ -2860,20 +2860,20 @@
 			fill_color 	13434879
 			quidu      	"581270480199"
 			width      	300
-			height     	747
+			height     	769
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
 			Focus_Of_Control 	(object Focus_Of_Control "" @109
-			    location   	(2369, 405)
+			    location   	(2284, 383)
 			    line_color 	3342489
 			    InterObjView 	@108
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
 		    (object InterObjView "Gallery" @110
-			location   	(2784, 328)
+			location   	(2653, 300)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -2886,7 +2886,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@110
-			    location   	(2784, 328)
+			    location   	(2653, 300)
 			    fill_color 	13434879
 			    anchor_loc 	1
 			    nlines     	2
@@ -2898,13 +2898,13 @@
 			fill_color 	13434879
 			quidu      	"5812704E036D"
 			width      	300
-			height     	744
+			height     	772
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
 			Focus_Of_Control 	(object Focus_Of_Control "" @111
-			    location   	(2784, 408)
+			    location   	(2653, 380)
 			    line_color 	3342489
 			    InterObjView 	@110
 			    height     	90
@@ -2938,7 +2938,7 @@
 			    quidu      	"581279A302F0"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	670
+			    max_width  	659
 			    justify    	0
 			    label      	
 |Нажатие кнопки "Get information"
@@ -3629,7 +3629,7 @@
 		origin_y   	0
 		items      	(list diagram_item_list
 		    (object InterObjView "User" @150
-			location   	(353, 347)
+			location   	(334, 347)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -3642,7 +3642,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@150
-			    location   	(353, 347)
+			    location   	(334, 347)
 			    fill_color 	13434879
 			    anchor_loc 	1
 			    nlines     	2
@@ -3660,7 +3660,7 @@
 			icon_y_offset 	0
 			annotation 	1
 			Focus_Of_Control 	(object Focus_Of_Control "" @151
-			    location   	(353, 427)
+			    location   	(334, 427)
 			    line_color 	3342489
 			    InterObjView 	@150
 			    height     	160
@@ -3881,7 +3881,7 @@
 			    default_color 	TRUE)
 			label      	(object SegLabel @168
 			    Parent_View 	@167
-			    location   	(701, 446)
+			    location   	(694, 446)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -3908,7 +3908,7 @@
 			supplier   	@152
 			Focus_Src  	@151
 			Focus_Entry 	@154
-			origin     	(368, 497)
+			origin     	(349, 497)
 			terminus   	(899, 497)
 			ordinal    	0)
 		    (object InterMessView "Отправка команды сохранения лиц" @169
