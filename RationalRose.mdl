@@ -342,7 +342,7 @@
 				supplier   	@1
 				vertices   	(list Points
 				    (898, 1022)
-				    (708, 1054))
+				    (708, 1055))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$2" @9
 				Parent_View 	@7
@@ -354,7 +354,7 @@
 				supplier   	@6
 				vertices   	(list Points
 				    (898, 1022)
-				    (1089, 988))
+				    (1089, 989))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$3" @10
 			location   	(1004, 835)
@@ -382,7 +382,7 @@
 				supplier   	@2
 				vertices   	(list Points
 				    (1004, 835)
-				    (957, 788))
+				    (919, 749))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$5" @12
 				Parent_View 	@10
@@ -394,7 +394,7 @@
 				supplier   	@6
 				vertices   	(list Points
 				    (1004, 835)
-				    (1087, 919))
+				    (1089, 921))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$6" @13
 			location   	(1285, 839)
@@ -422,7 +422,7 @@
 				supplier   	@3
 				vertices   	(list Points
 				    (1285, 839)
-				    (1475, 650))
+				    (1366, 757))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$8" @15
 				Parent_View 	@13
@@ -462,7 +462,7 @@
 				supplier   	@4
 				vertices   	(list Points
 				    (1372, 1011)
-				    (1538, 1033))
+				    (1540, 1035))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$11" @18
 				Parent_View 	@16
@@ -514,7 +514,7 @@
 				supplier   	@6
 				vertices   	(list Points
 				    (1149, 1253)
-				    (1148, 1166))
+				    (1149, 1166))
 				line_style 	0)))))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"580E450F0244"
@@ -1187,7 +1187,79 @@
 		(object ActivityState "Вывод сообщения об ошибке"
 		    quid       	"581268DD0318")
 		(object ActivityState "Вывод сообщения об отсутствии лиц на фотографии"
-		    quid       	"581269B602F2"))
+		    quid       	"581269B602F2")
+		(object State "Подключен к камере"
+		    quid       	"5820E72D03AB"
+		    type       	"Normal")
+		(object State "Не подключен к камере"
+		    quid       	"5820E75E008B"
+		    type       	"Normal")
+		(object State "Сделана фотография"
+		    quid       	"5820E83E004B"
+		    type       	"Normal")
+		(object State "Отключён от камеры"
+		    quid       	"5820E8720153"
+		    type       	"Normal")
+		(object State "$UNNAMED$23"
+		    quid       	"5820E8C2011C"
+		    type       	"EndState")
+		(object State "Подключен к интернету"
+		    quid       	"5820EA2A0223"
+		    type       	"Normal")
+		(object State "Не подключен к интернету"
+		    quid       	"5820EA3601EB"
+		    type       	"Normal")
+		(object State "Выведена информация"
+		    quid       	"5820EA9E004B"
+		    type       	"Normal")
+		(object State "$UNNAMED$24"
+		    quid       	"5820EAD802CB"
+		    type       	"EndState")
+		(object State "Подключен к галерее"
+		    quid       	"5820EB6C03CB"
+		    type       	"Normal")
+		(object State "Не подключен к галерее"
+		    quid       	"5820EB7D02F3"
+		    type       	"Normal")
+		(object State "Фотография выбрана"
+		    quid       	"5820EBF103E3"
+		    type       	"Normal")
+		(object State "$UNNAMED$25"
+		    quid       	"5820EC350202"
+		    type       	"EndState")
+		(object State "Фотография загружена"
+		    quid       	"5820ED04020B"
+		    type       	"Normal")
+		(object State "Лицо определено"
+		    quid       	"5820ED2E0333"
+		    type       	"Normal")
+		(object State "Лицо не определено"
+		    quid       	"5820ED350343"
+		    type       	"Normal")
+		(object State "Лицо сохранено"
+		    quid       	"5820EE19006B"
+		    type       	"Normal")
+		(object State "$UNNAMED$26"
+		    quid       	"5820EE7103BB"
+		    type       	"EndState")
+		(object State "Фотография загружена."
+		    quid       	"5820EED503D3"
+		    type       	"Normal")
+		(object State "Лицо определено."
+		    quid       	"5820EF310343"
+		    type       	"Normal")
+		(object State "Лицо не определно."
+		    quid       	"5820EF4300BB"
+		    type       	"Normal")
+		(object State "Результат поиска."
+		    quid       	"5820EFE0025B"
+		    type       	"Normal")
+		(object State "Поиск похожей"
+		    quid       	"5820EFFA0193"
+		    type       	"Normal")
+		(object State "$UNNAMED$27"
+		    quid       	"5820F0500373"
+		    type       	"EndState"))
 	    partitions 	(list Partitions)
 	    objects    	(list Objects)
 	    transitions 	(list transition_list
@@ -1446,7 +1518,341 @@
 		    client     	"Logical View::State/Activity Model::Вывод сообщения об отсутствии лиц на фотографии"
 		    client_quidu 	"581269B602F2"
 		    sendEvent  	(object sendEvent
-			quid       	"58126A0D0202")))
+			quid       	"58126A0D0202"))
+		(object State_Transition
+		    quid       	"5820E76E01DF"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Подключен к камере"
+		    supplier_quidu 	"5820E72D03AB"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    condition  	"есть доступ к камере"
+		    action     	(object action "подключен"
+			quid       	"5820E76E01E1")
+		    sendEvent  	(object sendEvent
+			quid       	"5820E76E01E2"))
+		(object State_Transition
+		    quid       	"5820E7710147"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Не подключен к камере"
+		    supplier_quidu 	"5820E75E008B"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    condition  	"нет доступа камере"
+		    action     	(object action "не подключен"
+			quid       	"5820E7710149")
+		    sendEvent  	(object sendEvent
+			quid       	"5820E771014A"))
+		(object State_Transition
+		    quid       	"5820E8650396"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Сделана фотография"
+		    supplier_quidu 	"5820E83E004B"
+		    client     	"Logical View::State/Activity Model::Подключен к камере"
+		    client_quidu 	"5820E72D03AB"
+		    Event      	(object Event "Сфотографировать"
+			quid       	"5820E8650397")
+		    sendEvent  	(object sendEvent
+			quid       	"5820E8650399"))
+		(object State_Transition
+		    quid       	"5820E88802A6"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Отключён от камеры"
+		    supplier_quidu 	"5820E8720153"
+		    client     	"Logical View::State/Activity Model::Сделана фотография"
+		    client_quidu 	"5820E83E004B"
+		    Event      	(object Event "Отключитья от камеры"
+			quid       	"5820E88802A7")
+		    sendEvent  	(object sendEvent
+			quid       	"5820E88802A9"))
+		(object State_Transition
+		    quid       	"5820E8950177"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Отключён от камеры"
+		    supplier_quidu 	"5820E8720153"
+		    client     	"Logical View::State/Activity Model::Не подключен к камере"
+		    client_quidu 	"5820E75E008B"
+		    Event      	(object Event "Отключиться от камеры"
+			quid       	"5820E8950178")
+		    sendEvent  	(object sendEvent
+			quid       	"5820E895017A"))
+		(object State_Transition
+		    quid       	"5820E8C60277"
+		    supplier   	"$UNNAMED$23"
+		    supplier_quidu 	"5820E8C2011C"
+		    client     	"Logical View::State/Activity Model::Отключён от камеры"
+		    client_quidu 	"5820E8720153"
+		    sendEvent  	(object sendEvent
+			quid       	"5820E8C6027A"))
+		(object State_Transition
+		    quid       	"5820EA460137"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Подключен к интернету"
+		    supplier_quidu 	"5820EA2A0223"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    condition  	"есть доступ к интернету"
+		    action     	(object action "подключен"
+			quid       	"5820EA460139")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EA46013A"))
+		(object State_Transition
+		    quid       	"5820EA4900D7"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Не подключен к интернету"
+		    supplier_quidu 	"5820EA3601EB"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    condition  	"нет доступа интернету"
+		    action     	(object action "не подключен"
+			quid       	"5820EA4900D9")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EA4900DA"))
+		(object State_Transition
+		    quid       	"5820EAB20017"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Выведена информация"
+		    supplier_quidu 	"5820EA9E004B"
+		    client     	"Logical View::State/Activity Model::Подключен к интернету"
+		    client_quidu 	"5820EA2A0223"
+		    Event      	(object Event "Обновление информации"
+			quid       	"5820EAB20018")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EAB2001A"))
+		(object State_Transition
+		    quid       	"5820EADB030F"
+		    supplier   	"$UNNAMED$24"
+		    supplier_quidu 	"5820EAD802CB"
+		    client     	"Logical View::State/Activity Model::Выведена информация"
+		    client_quidu 	"5820EA9E004B"
+		    sendEvent  	(object sendEvent
+			quid       	"5820EADB0312"))
+		(object State_Transition
+		    quid       	"5820EAF002DF"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Выведена информация"
+		    supplier_quidu 	"5820EA9E004B"
+		    client     	"Logical View::State/Activity Model::Не подключен к интернету"
+		    client_quidu 	"5820EA3601EB"
+		    Event      	(object Event "Сообщение об ошибке"
+			quid       	"5820EAF002E0")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EAF002E2"))
+		(object State_Transition
+		    quid       	"5820EB8A0227"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Подключен к галерее"
+		    supplier_quidu 	"5820EB6C03CB"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    condition  	"есть доступа к галерее"
+		    action     	(object action "подключен"
+			quid       	"5820EB8A0229")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EB8A022A"))
+		(object State_Transition
+		    quid       	"5820EB8C0227"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Не подключен к галерее"
+		    supplier_quidu 	"5820EB7D02F3"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    condition  	"нет доступа к галерее"
+		    action     	(object action "не подключен"
+			quid       	"5820EB8C0229")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EB8C022A"))
+		(object State_Transition
+		    quid       	"5820EC02008F"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Фотография выбрана"
+		    supplier_quidu 	"5820EBF103E3"
+		    client     	"Logical View::State/Activity Model::Подключен к галерее"
+		    client_quidu 	"5820EB6C03CB"
+		    Event      	(object Event "Выбор фотографии"
+			quid       	"5820EC020090")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EC020092"))
+		(object State_Transition
+		    quid       	"5820EC4102C7"
+		    label      	""
+		    supplier   	"$UNNAMED$25"
+		    supplier_quidu 	"5820EC350202"
+		    client     	"Logical View::State/Activity Model::Не подключен к галерее"
+		    client_quidu 	"5820EB7D02F3"
+		    Event      	(object Event "Ошибка"
+			quid       	"5820EC4102C8")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EC4102CA"))
+		(object State_Transition
+		    quid       	"5820EC44017F"
+		    label      	""
+		    supplier   	"$UNNAMED$25"
+		    supplier_quidu 	"5820EC350202"
+		    client     	"Logical View::State/Activity Model::Фотография выбрана"
+		    client_quidu 	"5820EBF103E3"
+		    Event      	(object Event "ОК"
+			quid       	"5820EC440180")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EC440182"))
+		(object State_Transition
+		    quid       	"5820ED1A0307"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Фотография загружена"
+		    supplier_quidu 	"5820ED04020B"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    Event      	(object Event "Загрузка фотографии"
+			quid       	"5820ED1A0308")
+		    sendEvent  	(object sendEvent
+			quid       	"5820ED1A030A"))
+		(object State_Transition
+		    quid       	"5820ED7B0087"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Лицо определено"
+		    supplier_quidu 	"5820ED2E0333"
+		    client     	"Logical View::State/Activity Model::Фотография загружена"
+		    client_quidu 	"5820ED04020B"
+		    condition  	"есть лицо на фотографии"
+		    action     	(object action "определено"
+			quid       	"5820ED7B0089")
+		    sendEvent  	(object sendEvent
+			quid       	"5820ED7B008A"))
+		(object State_Transition
+		    quid       	"5820ED7D0177"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Лицо не определено"
+		    supplier_quidu 	"5820ED350343"
+		    client     	"Logical View::State/Activity Model::Фотография загружена"
+		    client_quidu 	"5820ED04020B"
+		    condition  	"нет лица на фотографии"
+		    action     	(object action "не определено"
+			quid       	"5820ED7D0179")
+		    sendEvent  	(object sendEvent
+			quid       	"5820ED7D017A"))
+		(object State_Transition
+		    quid       	"5820EE470297"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Лицо сохранено"
+		    supplier_quidu 	"5820EE19006B"
+		    client     	"Logical View::State/Activity Model::Лицо определено"
+		    client_quidu 	"5820ED2E0333"
+		    Event      	(object Event "Сохранение лица в галерею"
+			quid       	"5820EE470298")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EE47029A"))
+		(object State_Transition
+		    quid       	"5820EE770067"
+		    label      	""
+		    supplier   	"$UNNAMED$26"
+		    supplier_quidu 	"5820EE7103BB"
+		    client     	"Logical View::State/Activity Model::Лицо не определено"
+		    client_quidu 	"5820ED350343"
+		    Event      	(object Event "Ошибка"
+			quid       	"5820EE770068")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EE77006A"))
+		(object State_Transition
+		    quid       	"5820EE7903AF"
+		    label      	""
+		    supplier   	"$UNNAMED$26"
+		    supplier_quidu 	"5820EE7103BB"
+		    client     	"Logical View::State/Activity Model::Лицо сохранено"
+		    client_quidu 	"5820EE19006B"
+		    Event      	(object Event "ОК"
+			quid       	"5820EE7903B0")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EE7903B2"))
+		(object State_Transition
+		    quid       	"5820EF000057"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Фотография загружена."
+		    supplier_quidu 	"5820EED503D3"
+		    client     	"$UNNAMED$16"
+		    client_quidu 	"580E46B50092"
+		    Event      	(object Event "Загрузка фотографии"
+			quid       	"5820EF000058")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EF00005A"))
+		(object State_Transition
+		    quid       	"5820EF510197"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Лицо определено."
+		    supplier_quidu 	"5820EF310343"
+		    client     	"Logical View::State/Activity Model::Фотография загружена."
+		    client_quidu 	"5820EED503D3"
+		    condition  	"есть лицо на фотографии"
+		    action     	(object action "определено"
+			quid       	"5820EF510199")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EF51019A"))
+		(object State_Transition
+		    quid       	"5820EF53023F"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Лицо не определно."
+		    supplier_quidu 	"5820EF4300BB"
+		    client     	"Logical View::State/Activity Model::Фотография загружена."
+		    client_quidu 	"5820EED503D3"
+		    condition  	"нет лица на фотографии"
+		    action     	(object action "не определено"
+			quid       	"5820EF530241")
+		    sendEvent  	(object sendEvent
+			quid       	"5820EF530242"))
+		(object State_Transition
+		    quid       	"5820F002022B"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Поиск похожей"
+		    supplier_quidu 	"5820EFFA0193"
+		    client     	"Logical View::State/Activity Model::Поиск похожей"
+		    client_quidu 	"5820EFFA0193"
+		    Event      	(object Event "Выбор режима поиска"
+			quid       	"5820F002022C")
+		    sendEvent  	(object sendEvent
+			quid       	"5820F002022E"))
+		(object State_Transition
+		    quid       	"5820F0250387"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Поиск похожей"
+		    supplier_quidu 	"5820EFFA0193"
+		    client     	"Logical View::State/Activity Model::Лицо определено."
+		    client_quidu 	"5820EF310343"
+		    Event      	(object Event "Поиск"
+			quid       	"5820F0250388")
+		    sendEvent  	(object sendEvent
+			quid       	"5820F025038A"))
+		(object State_Transition
+		    quid       	"5820F0550107"
+		    label      	""
+		    supplier   	"Logical View::State/Activity Model::Результат поиска."
+		    supplier_quidu 	"5820EFE0025B"
+		    client     	"Logical View::State/Activity Model::Поиск похожей"
+		    client_quidu 	"5820EFFA0193"
+		    Event      	(object Event "Вывод похожей фотографии"
+			quid       	"5820F0550108")
+		    sendEvent  	(object sendEvent
+			quid       	"5820F055010A"))
+		(object State_Transition
+		    quid       	"5820F05A001F"
+		    label      	""
+		    supplier   	"$UNNAMED$27"
+		    supplier_quidu 	"5820F0500373"
+		    client     	"Logical View::State/Activity Model::Результат поиска."
+		    client_quidu 	"5820EFE0025B"
+		    Event      	(object Event "ОК"
+			quid       	"5820F05A0020")
+		    sendEvent  	(object sendEvent
+			quid       	"5820F05A0022"))
+		(object State_Transition
+		    quid       	"5820F05D002F"
+		    label      	""
+		    supplier   	"$UNNAMED$27"
+		    supplier_quidu 	"5820F0500373"
+		    client     	"Logical View::State/Activity Model::Лицо не определно."
+		    client_quidu 	"5820EF4300BB"
+		    Event      	(object Event "Ошибка"
+			quid       	"5820F05D0030")
+		    sendEvent  	(object sendEvent
+			quid       	"5820F05D0032")))
 	    objectflows 	(list objectflow_list)
 	    statediagrams 	(list StateDiagrams
 		(object ActivityDiagram "Get information"
@@ -2664,6 +3070,1838 @@
 				(1116, 1089)
 				(1116, 1262))
 			    line_style 	0
+			    x_offset   	FALSE)))
+		(object State_Diagram "CreatePhoto_"
+		    quid       	"5820E6020078"
+		    title      	"CreatePhoto_"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object StateView "StartState" "$UNNAMED$16" @97
+			    location   	(1076, 175)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"580E46B50092"
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Подключен к камере" @98
+			    location   	(625, 550)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@98
+				location   	(625, 531)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	242
+				justify    	0
+				label      	"Подключен к камере")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820E72D03AB"
+			    width      	338
+			    height     	150
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Не подключен к камере" @99
+			    location   	(1543, 550)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@99
+				location   	(1543, 535)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	304
+				justify    	0
+				label      	"Не подключен к камере")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820E75E008B"
+			    width      	400
+			    height     	143
+			    autoResize 	TRUE)
+			(object TransView "" @100
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @101
+				Parent_View 	@100
+				location   	(503, 298)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	716
+				justify    	0
+				label      	"[ есть доступ к камере ] / подключен"
+				pctDist    	1.117568
+				height     	271
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820E76E01DF"
+			    client     	@97
+			    supplier   	@98
+			    vertices   	(list Points
+				(1046, 199)
+				(715, 474))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @102
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @103
+				Parent_View 	@102
+				location   	(1686, 298)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	787
+				justify    	0
+				label      	"[ нет доступа камере ] / не подключен"
+				pctDist    	1.153389
+				height     	286
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820E7710147"
+			    client     	@97
+			    supplier   	@99
+			    vertices   	(list Points
+				(1106, 199)
+				(1454, 478))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Сделана фотография" @104
+			    location   	(625, 953)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@104
+				location   	(625, 943)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	372
+				justify    	0
+				label      	"Сделана фотография")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820E83E004B"
+			    width      	468
+			    height     	132
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Отключён от камеры" @105
+			    location   	(1541, 949)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@105
+				location   	(1541, 938)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	262
+				justify    	0
+				label      	"Отключён от камеры")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820E8720153"
+			    width      	358
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @106
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @107
+				Parent_View 	@106
+				location   	(1110, 906)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	430
+				justify    	0
+				label      	"Отключитья от камеры"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820E88802A6"
+			    client     	@104
+			    supplier   	@105
+			    vertices   	(list Points
+				(859, 951)
+				(1362, 949))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @108
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @109
+				Parent_View 	@108
+				location   	(1802, 739)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	455
+				justify    	0
+				label      	"Отключиться от камеры"
+				pctDist    	0.450404
+				height     	260
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820E8950177"
+			    client     	@99
+			    supplier   	@105
+			    vertices   	(list Points
+				(1542, 620)
+				(1541, 882))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @110
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @111
+				Parent_View 	@110
+				location   	(412, 759)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	358
+				justify    	0
+				label      	"Сфотографировать"
+				pctDist    	0.511450
+				height     	213
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820E8650396"
+			    client     	@98
+			    supplier   	@104
+			    vertices   	(list Points
+				(625, 625)
+				(625, 887))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$23" @112
+			    location   	(1974, 949)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5820E8C2011C"
+			    autoResize 	TRUE)
+			(object TransView "" @113
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820E8C60277"
+			    client     	@105
+			    supplier   	@112
+			    vertices   	(list Points
+				(1720, 949)
+				(1932, 949))
+			    line_style 	0
+			    x_offset   	FALSE)))
+		(object State_Diagram "GetInformation_"
+		    quid       	"5820E9F00299"
+		    title      	"GetInformation_"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object StateView "StartState" "$UNNAMED$16" @114
+			    location   	(1226, 75)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"580E46B50092"
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Подключен к интернету" @115
+			    location   	(709, 389)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@115
+				location   	(709, 378)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	280
+				justify    	0
+				label      	"Подключен к интернету")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EA2A0223"
+			    width      	376
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Не подключен к интернету" @116
+			    location   	(1928, 379)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@116
+				location   	(1928, 368)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	314
+				justify    	0
+				label      	"Не подключен к интернету")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EA3601EB"
+			    width      	410
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @117
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @118
+				Parent_View 	@117
+				location   	(530, 204)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	753
+				justify    	0
+				label      	"[ есть доступ к интернету ] / подключен"
+				pctDist    	1.421088
+				height     	250
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EA460137"
+			    client     	@114
+			    supplier   	@115
+			    vertices   	(list Points
+				(1196, 93)
+				(819, 322))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @119
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @120
+				Parent_View 	@119
+				location   	(1951, 163)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	839
+				justify    	0
+				label      	"[ нет доступа интернету ] / не подключен"
+				pctDist    	1.185450
+				height     	207
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EA4900D7"
+			    client     	@114
+			    supplier   	@116
+			    vertices   	(list Points
+				(1256, 87)
+				(1773, 311))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Выведена информация" @121
+			    location   	(709, 819)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@121
+				location   	(709, 800)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	284
+				justify    	0
+				label      	"Выведена информация")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EA9E004B"
+			    width      	381
+			    height     	150
+			    autoResize 	TRUE)
+			(object TransView "" @122
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @123
+				Parent_View 	@122
+				location   	(450, 599)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	535
+				justify    	0
+				label      	"Обновление информации"
+				pctDist    	0.496528
+				height     	259
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EAB20017"
+			    client     	@115
+			    supplier   	@121
+			    vertices   	(list Points
+				(709, 456)
+				(709, 744))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$24" @124
+			    location   	(1954, 820)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5820EAD802CB"
+			    autoResize 	TRUE)
+			(object TransView "" @125
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EADB030F"
+			    client     	@121
+			    supplier   	@124
+			    vertices   	(list Points
+				(899, 819)
+				(1912, 819))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @126
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @127
+				Parent_View 	@126
+				location   	(1618, 620)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	449
+				justify    	0
+				label      	"Сообщение об ошибке"
+				pctDist    	0.196481
+				height     	122
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EAF002DF"
+			    client     	@116
+			    supplier   	@121
+			    vertices   	(list Points
+				(1742, 445)
+				(899, 750))
+			    line_style 	0
+			    x_offset   	FALSE)))
+		(object State_Diagram "LoadPhoto_"
+		    quid       	"5820EB4603D9"
+		    title      	"LoadPhoto_"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object StateView "StartState" "$UNNAMED$16" @128
+			    location   	(1073, 126)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"580E46B50092"
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Подключен к галерее" @129
+			    location   	(578, 447)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@129
+				location   	(578, 436)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	266
+				justify    	0
+				label      	"Подключен к галерее")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EB6C03CB"
+			    width      	362
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Не подключен к галерее" @130
+			    location   	(1671, 442)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@130
+				location   	(1671, 431)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	278
+				justify    	0
+				label      	"Не подключен к галерее")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EB7D02F3"
+			    width      	374
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @131
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @132
+				Parent_View 	@131
+				location   	(508, 206)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	741
+				justify    	0
+				label      	"[ есть доступа к галерее ] / подключен"
+				pctDist    	1.119182
+				height     	239
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EB8A0227"
+			    client     	@128
+			    supplier   	@129
+			    vertices   	(list Points
+				(1043, 145)
+				(681, 379))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @133
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @134
+				Parent_View 	@133
+				location   	(1758, 206)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	834
+				justify    	0
+				label      	"[ нет доступа к галерее ] / не подключен"
+				pctDist    	1.222012
+				height     	249
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EB8C0227"
+			    client     	@128
+			    supplier   	@130
+			    vertices   	(list Points
+				(1103, 141)
+				(1544, 374))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Фотография выбрана" @135
+			    location   	(578, 906)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@135
+				location   	(578, 890)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	298
+				justify    	0
+				label      	"Фотография выбрана")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EBF103E3"
+			    width      	394
+			    height     	144
+			    autoResize 	TRUE)
+			(object TransView "" @136
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @137
+				Parent_View 	@136
+				location   	(378, 670)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	444
+				justify    	0
+				label      	"Выбор фотографии"
+				pctDist    	0.487500
+				height     	200
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EC02008F"
+			    client     	@129
+			    supplier   	@135
+			    vertices   	(list Points
+				(578, 514)
+				(578, 834))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$25" @138
+			    location   	(1673, 908)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5820EC350202"
+			    autoResize 	TRUE)
+			(object TransView "" @139
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @140
+				Parent_View 	@139
+				location   	(1778, 682)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	147
+				justify    	0
+				label      	"Ошибка"
+				pctDist    	0.486795
+				height     	107
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EC4102C7"
+			    client     	@130
+			    supplier   	@138
+			    vertices   	(list Points
+				(1671, 509)
+				(1672, 865))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @141
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @142
+				Parent_View 	@141
+				location   	(1203, 862)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	"ОК"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EC44017F"
+			    client     	@135
+			    supplier   	@138
+			    vertices   	(list Points
+				(775, 906)
+				(1631, 907))
+			    line_style 	0
+			    x_offset   	FALSE)))
+		(object State_Diagram "SaveFaces_"
+		    quid       	"5820ECCC0241"
+		    title      	"SaveFaces_"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object StateView "StartState" "$UNNAMED$16" @143
+			    location   	(1120, 89)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"580E46B50092"
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Фотография загружена" @144
+			    location   	(1118, 386)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@144
+				location   	(1118, 375)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	284
+				justify    	0
+				label      	"Фотография загружена")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820ED04020B"
+			    width      	380
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @145
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @146
+				Parent_View 	@145
+				location   	(1370, 219)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	427
+				justify    	0
+				label      	"Загрузка фотографии"
+				pctDist    	0.493713
+				height     	251
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820ED1A0307"
+			    client     	@143
+			    supplier   	@144
+			    vertices   	(list Points
+				(1119, 119)
+				(1118, 319))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Лицо определено" @147
+			    location   	(686, 726)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@147
+				location   	(686, 715)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	220
+				justify    	0
+				label      	"Лицо определено")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820ED2E0333"
+			    width      	316
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Лицо не определено" @148
+			    location   	(1545, 714)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@148
+				location   	(1545, 703)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	220
+				justify    	0
+				label      	"Лицо не определено")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820ED350343"
+			    width      	316
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @149
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @150
+				Parent_View 	@149
+				location   	(501, 514)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	854
+				justify    	0
+				label      	"[ есть лицо на фотографии ] / определено"
+				pctDist    	1.367729
+				height     	283
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820ED7B0087"
+			    client     	@144
+			    supplier   	@147
+			    vertices   	(list Points
+				(1032, 453)
+				(771, 659))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @151
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @152
+				Parent_View 	@151
+				location   	(1790, 516)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	872
+				justify    	0
+				label      	"[ нет лица на фотографии ] / не определено"
+				pctDist    	1.573560
+				height     	309
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820ED7D0177"
+			    client     	@144
+			    supplier   	@148
+			    vertices   	(list Points
+				(1205, 452)
+				(1457, 647))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Лицо сохранено" @153
+			    location   	(684, 1092)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@153
+				location   	(684, 1081)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"Лицо сохранено")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EE19006B"
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @154
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @155
+				Parent_View 	@154
+				location   	(393, 917)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	547
+				justify    	0
+				label      	"Сохранение лица в галерею"
+				pctDist    	0.542277
+				height     	292
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EE470297"
+			    client     	@147
+			    supplier   	@153
+			    vertices   	(list Points
+				(685, 793)
+				(684, 1024))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$26" @156
+			    location   	(1545, 1092)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5820EE7103BB"
+			    autoResize 	TRUE)
+			(object TransView "" @157
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @158
+				Parent_View 	@157
+				location   	(1653, 917)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	147
+				justify    	0
+				label      	"Ошибка"
+				pctDist    	0.505576
+				height     	108
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EE770067"
+			    client     	@148
+			    supplier   	@156
+			    vertices   	(list Points
+				(1545, 781)
+				(1545, 1050))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @159
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @160
+				Parent_View 	@159
+				location   	(1168, 1048)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	"ОК"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EE7903AF"
+			    client     	@153
+			    supplier   	@156
+			    vertices   	(list Points
+				(834, 1092)
+				(1503, 1092))
+			    line_style 	0
+			    x_offset   	FALSE)))
+		(object State_Diagram "SearchForSimilar_"
+		    quid       	"5820EEC30389"
+		    title      	"SearchForSimilar_"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	0
+		    origin_y   	675
+		    items      	(list diagram_item_list
+			(object StateView "StartState" "$UNNAMED$16" @161
+			    location   	(1229, 120)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"580E46B50092"
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Фотография загружена." @162
+			    location   	(1230, 461)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@162
+				location   	(1230, 450)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	288
+				justify    	0
+				label      	"Фотография загружена.")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EED503D3"
+			    width      	384
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @163
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @164
+				Parent_View 	@163
+				location   	(1475, 264)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	427
+				justify    	0
+				label      	"Загрузка фотографии"
+				pctDist    	0.469136
+				height     	246
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EF000057"
+			    client     	@161
+			    supplier   	@162
+			    vertices   	(list Points
+				(1229, 150)
+				(1229, 393))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Лицо определено." @165
+			    location   	(669, 809)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@165
+				location   	(669, 798)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	240
+				justify    	0
+				label      	"Лицо определено.")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EF310343"
+			    width      	336
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Лицо не определно." @166
+			    location   	(1831, 799)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@166
+				location   	(1831, 788)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	216
+				justify    	0
+				label      	"Лицо не определно.")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EF4300BB"
+			    width      	312
+			    height     	134
+			    autoResize 	TRUE)
+			(object TransView "" @167
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @168
+				Parent_View 	@167
+				location   	(542, 598)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	807
+				justify    	0
+				label      	"[ есть лицо на фотографии ] / определено"
+				pctDist    	1.307755
+				height     	246
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EF510197"
+			    client     	@162
+			    supplier   	@165
+			    vertices   	(list Points
+				(1121, 528)
+				(777, 741))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @169
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @170
+				Parent_View 	@169
+				location   	(2011, 595)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	886
+				justify    	0
+				label      	"[ нет лица на фотографии ] / не определено"
+				pctDist    	1.465219
+				height     	267
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820EF53023F"
+			    client     	@162
+			    supplier   	@166
+			    vertices   	(list Points
+				(1349, 527)
+				(1711, 732))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "Normal" "Результат поиска." @171
+			    location   	(1606, 1202)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@171
+				location   	(1606, 1191)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"Результат поиска.")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EFE0025B"
+			    height     	134
+			    autoResize 	TRUE)
+			(object StateView "Normal" "Поиск похожей" @172
+			    location   	(1009, 1198)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@172
+				location   	(1009, 1187)
+				fill_color 	13434879
+				anchor_loc 	1
+				nlines     	2
+				max_width  	204
+				justify    	0
+				label      	"Поиск похожей")
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"5820EFFA0193"
+			    height     	134
+			    autoResize 	TRUE)
+			(object SelfTransView "" @173
+			    location   	(1009, 981)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @174
+				Parent_View 	@173
+				location   	(1008, 922)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	425
+				justify    	0
+				label      	"Выбор режима поиска"
+				pctDist    	0.500000
+				height     	210
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820F002022B"
+			    client     	@172
+			    supplier   	@172
+			    vertices   	(list Points
+				(952, 1131)
+				(1066, 1130))
+			    line_style 	4)
+			(object TransView "" @175
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @176
+				Parent_View 	@175
+				location   	(759, 1020)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	113
+				justify    	0
+				label      	"Поиск"
+				pctDist    	0.382616
+				height     	71
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820F0250387"
+			    client     	@165
+			    supplier   	@172
+			    vertices   	(list Points
+				(727, 876)
+				(950, 1130))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object StateView "EndState" "$UNNAMED$27" @177
+			    location   	(1973, 1202)
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    quidu      	"5820F0500373"
+			    autoResize 	TRUE)
+			(object TransView "" @178
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @179
+				Parent_View 	@178
+				location   	(1320, 1336)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	300
+				justify    	0
+				label      	"Вывод похожей фотографии"
+				pctDist    	0.543635
+				height     	136
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820F0550107"
+			    client     	@172
+			    supplier   	@171
+			    vertices   	(list Points
+				(1159, 1199)
+				(1456, 1200))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @180
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @181
+				Parent_View 	@180
+				location   	(1844, 1158)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	60
+				justify    	0
+				label      	"ОК"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820F05A001F"
+			    client     	@171
+			    supplier   	@177
+			    vertices   	(list Points
+				(1756, 1202)
+				(1931, 1202))
+			    line_style 	0
+			    x_offset   	FALSE)
+			(object TransView "" @182
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @183
+				Parent_View 	@182
+				location   	(2013, 992)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    charSet    	204
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				anchor_loc 	1
+				nlines     	1
+				max_width  	147
+				justify    	0
+				label      	"Ошибка"
+				pctDist    	0.551926
+				height     	108
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"5820F05D002F"
+			    client     	@166
+			    supplier   	@177
+			    vertices   	(list Points
+				(1854, 865)
+				(1958, 1160))
+			    line_style 	0
 			    x_offset   	FALSE)))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
@@ -2685,7 +4923,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object InterObjView "User" @97
+		    (object InterObjView "User" @184
 			location   	(181, 325)
 			font       	(object Font
 			    size       	10
@@ -2698,7 +4936,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@97
+			    Parent_View 	@184
 			    location   	(181, 325)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -2716,14 +4954,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @98
+			Focus_Of_Control 	(object Focus_Of_Control "" @185
 			    location   	(181, 405)
 			    line_color 	3342489
-			    InterObjView 	@97
+			    InterObjView 	@184
 			    height     	107
 			    y_coord    	17
 			    Nested     	FALSE))
-		    (object InterObjView "GUI" @99
+		    (object InterObjView "GUI" @186
 			location   	(1165, 325)
 			font       	(object Font
 			    size       	10
@@ -2736,7 +4974,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@99
+			    Parent_View 	@186
 			    location   	(1165, 325)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -2754,28 +4992,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @100
+			Focus_Of_Control 	(object Focus_Of_Control "" @187
 			    location   	(1165, 405)
 			    line_color 	3342489
-			    InterObjView 	@99
+			    InterObjView 	@186
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @101
+			Focus_Of_Control 	(object Focus_Of_Control "" @188
 			    location   	(1165, 422)
 			    line_color 	3342489
-			    InterObjView 	@99
+			    InterObjView 	@186
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @102
+			Focus_Of_Control 	(object Focus_Of_Control "" @189
 			    location   	(1165, 892)
 			    line_color 	3342489
-			    InterObjView 	@99
+			    InterObjView 	@186
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Controller" @103
+		    (object InterObjView "Controller" @190
 			location   	(1846, 328)
 			font       	(object Font
 			    size       	10
@@ -2788,7 +5026,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@103
+			    Parent_View 	@190
 			    location   	(1846, 328)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -2806,35 +5044,35 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @104
+			Focus_Of_Control 	(object Focus_Of_Control "" @191
 			    location   	(1846, 408)
 			    line_color 	3342489
-			    InterObjView 	@103
+			    InterObjView 	@190
 			    height     	179
 			    y_coord    	89
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @105
+			Focus_Of_Control 	(object Focus_Of_Control "" @192
 			    location   	(1846, 527)
 			    line_color 	3342489
-			    InterObjView 	@103
+			    InterObjView 	@190
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @106
+			Focus_Of_Control 	(object Focus_Of_Control "" @193
 			    location   	(1846, 657)
 			    line_color 	3342489
-			    InterObjView 	@103
+			    InterObjView 	@190
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @107
+			Focus_Of_Control 	(object Focus_Of_Control "" @194
 			    location   	(1846, 787)
 			    line_color 	3342489
-			    InterObjView 	@103
+			    InterObjView 	@190
 			    height     	105
 			    y_coord    	15
 			    Nested     	TRUE))
-		    (object InterObjView "Camera" @108
+		    (object InterObjView "Camera" @195
 			location   	(2369, 325)
 			font       	(object Font
 			    size       	10
@@ -2847,7 +5085,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@108
+			    Parent_View 	@195
 			    location   	(2369, 325)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -2865,14 +5103,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @109
+			Focus_Of_Control 	(object Focus_Of_Control "" @196
 			    location   	(2369, 405)
 			    line_color 	3342489
-			    InterObjView 	@108
+			    InterObjView 	@195
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Gallery" @110
+		    (object InterObjView "Gallery" @197
 			location   	(2784, 328)
 			font       	(object Font
 			    size       	10
@@ -2885,7 +5123,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@110
+			    Parent_View 	@197
 			    location   	(2784, 328)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -2903,14 +5141,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @111
+			Focus_Of_Control 	(object Focus_Of_Control "" @198
 			    location   	(2784, 408)
 			    line_color 	3342489
-			    InterObjView 	@110
+			    InterObjView 	@197
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterMessView "Нажатие кнопки \"Get information\"" @112
+		    (object InterMessView "Нажатие кнопки \"Get information\"" @199
 			location   	(0, 422)
 			font       	(object Font
 			    size       	10
@@ -2922,8 +5160,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @113
-			    Parent_View 	@112
+			label      	(object SegLabel @200
+			    Parent_View 	@199
 			    location   	(672, 378)
 			    font       	(object Font
 				size       	10
@@ -2947,14 +5185,14 @@
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@97
-			supplier   	@99
-			Focus_Src  	@98
-			Focus_Entry 	@101
+			client     	@184
+			supplier   	@186
+			Focus_Src  	@185
+			Focus_Entry 	@188
 			origin     	(196, 422)
 			terminus   	(1149, 422)
 			ordinal    	0)
-		    (object InterMessView "Запрос на получение информации о текущей версии" @114
+		    (object InterMessView "Запрос на получение информации о текущей версии" @201
 			location   	(0, 527)
 			font       	(object Font
 			    size       	10
@@ -2966,8 +5204,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @115
-			    Parent_View 	@114
+			label      	(object SegLabel @202
+			    Parent_View 	@201
 			    location   	(1504, 393)
 			    font       	(object Font
 				size       	10
@@ -2989,14 +5227,14 @@
 			    height     	135
 			    orientation 	0)
 			line_color 	3342489
-			client     	@99
-			supplier   	@103
-			Focus_Src  	@101
-			Focus_Entry 	@105
+			client     	@186
+			supplier   	@190
+			Focus_Src  	@188
+			Focus_Entry 	@192
 			origin     	(1180, 527)
 			terminus   	(1830, 527)
 			ordinal    	1)
-		    (object SelfMessView "Проверка подключения к интернету" @116
+		    (object SelfMessView "Проверка подключения к интернету" @203
 			location   	(0, 632)
 			font       	(object Font
 			    size       	10
@@ -3008,8 +5246,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @117
-			    Parent_View 	@116
+			label      	(object SegLabel @204
+			    Parent_View 	@203
 			    location   	(2033, 527)
 			    font       	(object Font
 				size       	10
@@ -3031,14 +5269,14 @@
 			    height     	106
 			    orientation 	0)
 			line_color 	3342489
-			client     	@103
-			supplier   	@103
-			Focus_Src  	@105
-			Focus_Entry 	@106
+			client     	@190
+			supplier   	@190
+			Focus_Src  	@192
+			Focus_Entry 	@193
 			origin     	(1862, 632)
 			terminus   	(2012, 632)
 			ordinal    	2)
-		    (object SelfMessView "Получение информации о текущей версии" @118
+		    (object SelfMessView "Получение информации о текущей версии" @205
 			location   	(0, 762)
 			font       	(object Font
 			    size       	10
@@ -3050,8 +5288,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @119
-			    Parent_View 	@118
+			label      	(object SegLabel @206
+			    Parent_View 	@205
 			    location   	(2057, 895)
 			    font       	(object Font
 				size       	10
@@ -3070,17 +5308,17 @@
 			    justify    	0
 			    label      	"Получение информации о текущей версии"
 			    pctDist    	1.306667
-			    height     	133
+			    height     	45
 			    orientation 	1)
 			line_color 	3342489
-			client     	@103
-			supplier   	@103
-			Focus_Src  	@106
-			Focus_Entry 	@107
+			client     	@190
+			supplier   	@190
+			Focus_Src  	@193
+			Focus_Entry 	@194
 			origin     	(1862, 762)
 			terminus   	(2012, 762)
 			ordinal    	3)
-		    (object InterMessView "Отображение информации о текущей версии приложения" @120
+		    (object InterMessView "Отображение информации о текущей версии приложения" @207
 			location   	(0, 892)
 			font       	(object Font
 			    size       	10
@@ -3092,8 +5330,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @121
-			    Parent_View 	@120
+			label      	(object SegLabel @208
+			    Parent_View 	@207
 			    location   	(1498, 808)
 			    font       	(object Font
 				size       	10
@@ -3115,10 +5353,10 @@
 			    height     	85
 			    orientation 	1)
 			line_color 	3342489
-			client     	@103
-			supplier   	@99
-			Focus_Src  	@107
-			Focus_Entry 	@102
+			client     	@190
+			supplier   	@186
+			Focus_Src  	@194
+			Focus_Entry 	@189
 			origin     	(1830, 892)
 			terminus   	(1181, 892)
 			ordinal    	4)))
@@ -3132,7 +5370,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object InterObjView "User" @122
+		    (object InterObjView "User" @209
 			location   	(180, 368)
 			font       	(object Font
 			    size       	10
@@ -3145,7 +5383,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@122
+			    Parent_View 	@209
 			    location   	(180, 368)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3163,14 +5401,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @123
+			Focus_Of_Control 	(object Focus_Of_Control "" @210
 			    location   	(180, 448)
 			    line_color 	3342489
-			    InterObjView 	@122
+			    InterObjView 	@209
 			    height     	161
 			    y_coord    	71
 			    Nested     	FALSE))
-		    (object InterObjView "GUI" @124
+		    (object InterObjView "GUI" @211
 			location   	(853, 359)
 			font       	(object Font
 			    size       	10
@@ -3183,7 +5421,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@124
+			    Parent_View 	@211
 			    location   	(853, 359)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3201,28 +5439,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @125
+			Focus_Of_Control 	(object Focus_Of_Control "" @212
 			    location   	(853, 439)
 			    line_color 	3342489
-			    InterObjView 	@124
+			    InterObjView 	@211
 			    height     	140
 			    y_coord    	50
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @126
+			Focus_Of_Control 	(object Focus_Of_Control "" @213
 			    location   	(853, 519)
 			    line_color 	3342489
-			    InterObjView 	@124
+			    InterObjView 	@211
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @127
+			Focus_Of_Control 	(object Focus_Of_Control "" @214
 			    location   	(853, 1069)
 			    line_color 	3342489
-			    InterObjView 	@124
+			    InterObjView 	@211
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Controller" @128
+		    (object InterObjView "Controller" @215
 			location   	(1469, 353)
 			font       	(object Font
 			    size       	10
@@ -3235,7 +5473,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@128
+			    Parent_View 	@215
 			    location   	(1469, 353)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3253,28 +5491,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @129
+			Focus_Of_Control 	(object Focus_Of_Control "" @216
 			    location   	(1469, 433)
 			    line_color 	3342489
-			    InterObjView 	@128
+			    InterObjView 	@215
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @130
+			Focus_Of_Control 	(object Focus_Of_Control "" @217
 			    location   	(1469, 624)
 			    line_color 	3342489
-			    InterObjView 	@128
+			    InterObjView 	@215
 			    height     	195
 			    y_coord    	105
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @131
+			Focus_Of_Control 	(object Focus_Of_Control "" @218
 			    location   	(1469, 964)
 			    line_color 	3342489
-			    InterObjView 	@128
+			    InterObjView 	@215
 			    height     	105
 			    y_coord    	15
 			    Nested     	FALSE))
-		    (object InterObjView "Camera" @132
+		    (object InterObjView "Camera" @219
 			location   	(1901, 347)
 			font       	(object Font
 			    size       	10
@@ -3287,7 +5525,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@132
+			    Parent_View 	@219
 			    location   	(1901, 347)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3305,14 +5543,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @133
+			Focus_Of_Control 	(object Focus_Of_Control "" @220
 			    location   	(1901, 427)
 			    line_color 	3342489
-			    InterObjView 	@132
+			    InterObjView 	@219
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Gallery" @134
+		    (object InterObjView "Gallery" @221
 			location   	(2389, 340)
 			font       	(object Font
 			    size       	10
@@ -3325,7 +5563,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@134
+			    Parent_View 	@221
 			    location   	(2389, 340)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3343,28 +5581,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @135
+			Focus_Of_Control 	(object Focus_Of_Control "" @222
 			    location   	(2389, 420)
 			    line_color 	3342489
-			    InterObjView 	@134
+			    InterObjView 	@221
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @136
+			Focus_Of_Control 	(object Focus_Of_Control "" @223
 			    location   	(2389, 729)
 			    line_color 	3342489
-			    InterObjView 	@134
+			    InterObjView 	@221
 			    height     	195
 			    y_coord    	105
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @137
+			Focus_Of_Control 	(object Focus_Of_Control "" @224
 			    location   	(2389, 859)
 			    line_color 	3342489
-			    InterObjView 	@134
+			    InterObjView 	@221
 			    height     	310
 			    y_coord    	220
 			    Nested     	TRUE))
-		    (object InterMessView "Нажатие кнопки \"Load Photo\"" @138
+		    (object InterMessView "Нажатие кнопки \"Load Photo\"" @225
 			location   	(0, 519)
 			font       	(object Font
 			    size       	10
@@ -3376,8 +5614,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @139
-			    Parent_View 	@138
+			label      	(object SegLabel @226
+			    Parent_View 	@225
 			    location   	(507, 479)
 			    font       	(object Font
 				size       	10
@@ -3401,14 +5639,14 @@
 			    height     	41
 			    orientation 	0)
 			line_color 	3342489
-			client     	@122
-			supplier   	@124
-			Focus_Src  	@123
-			Focus_Entry 	@126
+			client     	@209
+			supplier   	@211
+			Focus_Src  	@210
+			Focus_Entry 	@213
 			origin     	(195, 519)
 			terminus   	(837, 519)
 			ordinal    	0)
-		    (object InterMessView "Сообщение контроллеру о необходимости использования галереи" @140
+		    (object InterMessView "Сообщение контроллеру о необходимости использования галереи" @227
 			location   	(0, 624)
 			font       	(object Font
 			    size       	10
@@ -3420,8 +5658,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @141
-			    Parent_View 	@140
+			label      	(object SegLabel @228
+			    Parent_View 	@227
 			    location   	(1170, 530)
 			    font       	(object Font
 				size       	10
@@ -3436,21 +5674,21 @@
 			    quidu      	"5812788003A5"
 			    anchor_loc 	1
 			    nlines     	3
-			    max_width  	528
+			    max_width  	556
 			    justify    	0
 			    label      	"Сообщение контроллеру о необходимости использования галереи"
 			    pctDist    	0.516605
 			    height     	95
 			    orientation 	0)
 			line_color 	3342489
-			client     	@124
-			supplier   	@128
-			Focus_Src  	@126
-			Focus_Entry 	@130
+			client     	@211
+			supplier   	@215
+			Focus_Src  	@213
+			Focus_Entry 	@217
 			origin     	(868, 624)
 			terminus   	(1453, 624)
 			ordinal    	1)
-		    (object InterMessView "Запрос на использование галереи" @142
+		    (object InterMessView "Запрос на использование галереи" @229
 			location   	(0, 729)
 			font       	(object Font
 			    size       	10
@@ -3462,8 +5700,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @143
-			    Parent_View 	@142
+			label      	(object SegLabel @230
+			    Parent_View 	@229
 			    location   	(1928, 685)
 			    font       	(object Font
 				size       	10
@@ -3485,14 +5723,14 @@
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@128
-			supplier   	@134
-			Focus_Src  	@130
-			Focus_Entry 	@136
+			client     	@215
+			supplier   	@221
+			Focus_Src  	@217
+			Focus_Entry 	@223
 			origin     	(1484, 729)
 			terminus   	(2373, 729)
 			ordinal    	2)
-		    (object SelfMessView "Выбор фотографии" @144
+		    (object SelfMessView "Выбор фотографии" @231
 			location   	(0, 834)
 			font       	(object Font
 			    size       	10
@@ -3504,8 +5742,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @145
-			    Parent_View 	@144
+			label      	(object SegLabel @232
+			    Parent_View 	@231
 			    location   	(2625, 796)
 			    font       	(object Font
 				size       	10
@@ -3527,14 +5765,14 @@
 			    height     	39
 			    orientation 	0)
 			line_color 	3342489
-			client     	@134
-			supplier   	@134
-			Focus_Src  	@136
-			Focus_Entry 	@137
+			client     	@221
+			supplier   	@221
+			Focus_Src  	@223
+			Focus_Entry 	@224
 			origin     	(2405, 834)
 			terminus   	(2555, 834)
 			ordinal    	3)
-		    (object InterMessView "Отправка фотографии" @146
+		    (object InterMessView "Отправка фотографии" @233
 			location   	(0, 964)
 			font       	(object Font
 			    size       	10
@@ -3546,8 +5784,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @147
-			    Parent_View 	@146
+			label      	(object SegLabel @234
+			    Parent_View 	@233
 			    location   	(1929, 920)
 			    font       	(object Font
 				size       	10
@@ -3569,14 +5807,14 @@
 			    height     	45
 			    orientation 	1)
 			line_color 	3342489
-			client     	@134
-			supplier   	@128
-			Focus_Src  	@137
-			Focus_Entry 	@131
+			client     	@221
+			supplier   	@215
+			Focus_Src  	@224
+			Focus_Entry 	@218
 			origin     	(2373, 964)
 			terminus   	(1485, 964)
 			ordinal    	4)
-		    (object InterMessView "Отображение фотографии" @148
+		    (object InterMessView "Отображение фотографии" @235
 			location   	(0, 1069)
 			font       	(object Font
 			    size       	10
@@ -3588,8 +5826,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @149
-			    Parent_View 	@148
+			label      	(object SegLabel @236
+			    Parent_View 	@235
 			    location   	(1161, 1025)
 			    font       	(object Font
 				size       	10
@@ -3611,10 +5849,10 @@
 			    height     	45
 			    orientation 	1)
 			line_color 	3342489
-			client     	@128
-			supplier   	@124
-			Focus_Src  	@131
-			Focus_Entry 	@127
+			client     	@215
+			supplier   	@211
+			Focus_Src  	@218
+			Focus_Entry 	@214
 			origin     	(1453, 1069)
 			terminus   	(869, 1069)
 			ordinal    	5)))
@@ -3628,7 +5866,7 @@
 		origin_x   	331
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object InterObjView "User" @150
+		    (object InterObjView "User" @237
 			location   	(353, 347)
 			font       	(object Font
 			    size       	10
@@ -3641,7 +5879,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@150
+			    Parent_View 	@237
 			    location   	(353, 347)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3659,14 +5897,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @151
+			Focus_Of_Control 	(object Focus_Of_Control "" @238
 			    location   	(353, 427)
 			    line_color 	3342489
-			    InterObjView 	@150
+			    InterObjView 	@237
 			    height     	160
 			    y_coord    	70
 			    Nested     	FALSE))
-		    (object InterObjView "GUI" @152
+		    (object InterObjView "GUI" @239
 			location   	(915, 331)
 			font       	(object Font
 			    size       	10
@@ -3679,7 +5917,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@152
+			    Parent_View 	@239
 			    location   	(915, 331)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3697,28 +5935,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @153
+			Focus_Of_Control 	(object Focus_Of_Control "" @240
 			    location   	(915, 411)
 			    line_color 	3342489
-			    InterObjView 	@152
+			    InterObjView 	@239
 			    height     	146
 			    y_coord    	56
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @154
+			Focus_Of_Control 	(object Focus_Of_Control "" @241
 			    location   	(915, 497)
 			    line_color 	3342489
-			    InterObjView 	@152
+			    InterObjView 	@239
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @155
+			Focus_Of_Control 	(object Focus_Of_Control "" @242
 			    location   	(915, 1177)
 			    line_color 	3342489
-			    InterObjView 	@152
+			    InterObjView 	@239
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Controller" @156
+		    (object InterObjView "Controller" @243
 			location   	(1491, 321)
 			font       	(object Font
 			    size       	10
@@ -3731,7 +5969,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@156
+			    Parent_View 	@243
 			    location   	(1491, 321)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3749,35 +5987,35 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @157
+			Focus_Of_Control 	(object Focus_Of_Control "" @244
 			    location   	(1491, 401)
 			    line_color 	3342489
-			    InterObjView 	@156
+			    InterObjView 	@243
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @158
+			Focus_Of_Control 	(object Focus_Of_Control "" @245
 			    location   	(1491, 602)
 			    line_color 	3342489
-			    InterObjView 	@156
+			    InterObjView 	@243
 			    height     	195
 			    y_coord    	105
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @159
+			Focus_Of_Control 	(object Focus_Of_Control "" @246
 			    location   	(1491, 732)
 			    line_color 	3342489
-			    InterObjView 	@156
+			    InterObjView 	@243
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @160
+			Focus_Of_Control 	(object Focus_Of_Control "" @247
 			    location   	(1491, 1072)
 			    line_color 	3342489
-			    InterObjView 	@156
+			    InterObjView 	@243
 			    height     	105
 			    y_coord    	15
 			    Nested     	FALSE))
-		    (object InterObjView "Camera" @161
+		    (object InterObjView "Camera" @248
 			location   	(2035, 315)
 			font       	(object Font
 			    size       	10
@@ -3790,7 +6028,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@161
+			    Parent_View 	@248
 			    location   	(2035, 315)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3808,14 +6046,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @162
+			Focus_Of_Control 	(object Focus_Of_Control "" @249
 			    location   	(2035, 395)
 			    line_color 	3342489
-			    InterObjView 	@161
+			    InterObjView 	@248
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Gallery" @163
+		    (object InterObjView "Gallery" @250
 			location   	(2574, 315)
 			font       	(object Font
 			    size       	10
@@ -3828,7 +6066,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@163
+			    Parent_View 	@250
 			    location   	(2574, 315)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -3846,28 +6084,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @164
+			Focus_Of_Control 	(object Focus_Of_Control "" @251
 			    location   	(2574, 395)
 			    line_color 	3342489
-			    InterObjView 	@163
+			    InterObjView 	@250
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @165
+			Focus_Of_Control 	(object Focus_Of_Control "" @252
 			    location   	(2574, 837)
 			    line_color 	3342489
-			    InterObjView 	@163
+			    InterObjView 	@250
 			    height     	195
 			    y_coord    	105
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @166
+			Focus_Of_Control 	(object Focus_Of_Control "" @253
 			    location   	(2574, 967)
 			    line_color 	3342489
-			    InterObjView 	@163
+			    InterObjView 	@250
 			    height     	310
 			    y_coord    	220
 			    Nested     	TRUE))
-		    (object InterMessView "Нажатие кнопки \"Save faces\"" @167
+		    (object InterMessView "Нажатие кнопки \"Save faces\"" @254
 			location   	(0, 497)
 			font       	(object Font
 			    size       	10
@@ -3879,8 +6117,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @168
-			    Parent_View 	@167
+			label      	(object SegLabel @255
+			    Parent_View 	@254
 			    location   	(701, 446)
 			    font       	(object Font
 				size       	10
@@ -3904,14 +6142,14 @@
 			    height     	52
 			    orientation 	0)
 			line_color 	3342489
-			client     	@150
-			supplier   	@152
-			Focus_Src  	@151
-			Focus_Entry 	@154
+			client     	@237
+			supplier   	@239
+			Focus_Src  	@238
+			Focus_Entry 	@241
 			origin     	(368, 497)
 			terminus   	(899, 497)
 			ordinal    	0)
-		    (object InterMessView "Отправка команды сохранения лиц" @169
+		    (object InterMessView "Отправка команды сохранения лиц" @256
 			location   	(0, 602)
 			font       	(object Font
 			    size       	10
@@ -3923,8 +6161,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @170
-			    Parent_View 	@169
+			label      	(object SegLabel @257
+			    Parent_View 	@256
 			    location   	(1179, 524)
 			    font       	(object Font
 				size       	10
@@ -3946,14 +6184,14 @@
 			    height     	79
 			    orientation 	0)
 			line_color 	3342489
-			client     	@152
-			supplier   	@156
-			Focus_Src  	@154
-			Focus_Entry 	@158
+			client     	@239
+			supplier   	@243
+			Focus_Src  	@241
+			Focus_Entry 	@245
 			origin     	(930, 602)
 			terminus   	(1475, 602)
 			ordinal    	1)
-		    (object SelfMessView "Детекция лиц на фотографии" @171
+		    (object SelfMessView "Детекция лиц на фотографии" @258
 			location   	(0, 707)
 			font       	(object Font
 			    size       	10
@@ -3965,8 +6203,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @172
-			    Parent_View 	@171
+			label      	(object SegLabel @259
+			    Parent_View 	@258
 			    location   	(1724, 630)
 			    font       	(object Font
 				size       	10
@@ -3988,14 +6226,14 @@
 			    height     	78
 			    orientation 	0)
 			line_color 	3342489
-			client     	@156
-			supplier   	@156
-			Focus_Src  	@158
-			Focus_Entry 	@159
+			client     	@243
+			supplier   	@243
+			Focus_Src  	@245
+			Focus_Entry 	@246
 			origin     	(1507, 707)
 			terminus   	(1657, 707)
 			ordinal    	2)
-		    (object InterMessView "Отправка изображений обнаруженных лиц" @173
+		    (object InterMessView "Отправка изображений обнаруженных лиц" @260
 			location   	(0, 837)
 			font       	(object Font
 			    size       	10
@@ -4007,8 +6245,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @174
-			    Parent_View 	@173
+			label      	(object SegLabel @261
+			    Parent_View 	@260
 			    location   	(2032, 793)
 			    font       	(object Font
 				size       	10
@@ -4030,14 +6268,14 @@
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@156
-			supplier   	@163
-			Focus_Src  	@159
-			Focus_Entry 	@165
+			client     	@243
+			supplier   	@250
+			Focus_Src  	@246
+			Focus_Entry 	@252
 			origin     	(1506, 837)
 			terminus   	(2558, 837)
 			ordinal    	3)
-		    (object SelfMessView "Сохранение лиц в галерею устройства" @175
+		    (object SelfMessView "Сохранение лиц в галерею устройства" @262
 			location   	(0, 942)
 			font       	(object Font
 			    size       	10
@@ -4049,8 +6287,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @176
-			    Parent_View 	@175
+			label      	(object SegLabel @263
+			    Parent_View 	@262
 			    location   	(2807, 874)
 			    font       	(object Font
 				size       	10
@@ -4072,14 +6310,14 @@
 			    height     	69
 			    orientation 	0)
 			line_color 	3342489
-			client     	@163
-			supplier   	@163
-			Focus_Src  	@165
-			Focus_Entry 	@166
+			client     	@250
+			supplier   	@250
+			Focus_Src  	@252
+			Focus_Entry 	@253
 			origin     	(2590, 942)
 			terminus   	(2740, 942)
 			ordinal    	4)
-		    (object InterMessView "Отправка сообщения о количестве сохранённых лиц" @177
+		    (object InterMessView "Отправка сообщения о количестве сохранённых лиц" @264
 			location   	(0, 1072)
 			font       	(object Font
 			    size       	10
@@ -4091,9 +6329,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @178
-			    Parent_View 	@177
-			    location   	(2031, 1015)
+			label      	(object SegLabel @265
+			    Parent_View 	@264
+			    location   	(2032, 1015)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -4114,14 +6352,14 @@
 			    height     	58
 			    orientation 	1)
 			line_color 	3342489
-			client     	@163
-			supplier   	@156
-			Focus_Src  	@166
-			Focus_Entry 	@160
+			client     	@250
+			supplier   	@243
+			Focus_Src  	@253
+			Focus_Entry 	@247
 			origin     	(2558, 1072)
 			terminus   	(1507, 1072)
 			ordinal    	5)
-		    (object InterMessView "Отображение количества сохранённых лиц" @179
+		    (object InterMessView "Отображение количества сохранённых лиц" @266
 			location   	(0, 1177)
 			font       	(object Font
 			    size       	10
@@ -4133,8 +6371,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @180
-			    Parent_View 	@179
+			label      	(object SegLabel @267
+			    Parent_View 	@266
 			    location   	(1217, 1090)
 			    font       	(object Font
 				size       	10
@@ -4156,10 +6394,10 @@
 			    height     	88
 			    orientation 	1)
 			line_color 	3342489
-			client     	@156
-			supplier   	@152
-			Focus_Src  	@160
-			Focus_Entry 	@155
+			client     	@243
+			supplier   	@239
+			Focus_Src  	@247
+			Focus_Entry 	@242
 			origin     	(1475, 1177)
 			terminus   	(931, 1177)
 			ordinal    	6)))
@@ -4173,7 +6411,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object InterObjView "User" @181
+		    (object InterObjView "User" @268
 			location   	(180, 356)
 			font       	(object Font
 			    size       	10
@@ -4186,7 +6424,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@181
+			    Parent_View 	@268
 			    location   	(180, 356)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -4204,14 +6442,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @182
+			Focus_Of_Control 	(object Focus_Of_Control "" @269
 			    location   	(180, 436)
 			    line_color 	3342489
-			    InterObjView 	@181
+			    InterObjView 	@268
 			    height     	171
 			    y_coord    	81
 			    Nested     	FALSE))
-		    (object InterObjView "GUI" @183
+		    (object InterObjView "GUI" @270
 			location   	(1003, 337)
 			font       	(object Font
 			    size       	10
@@ -4224,7 +6462,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@183
+			    Parent_View 	@270
 			    location   	(1003, 337)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -4242,42 +6480,42 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @184
+			Focus_Of_Control 	(object Focus_Of_Control "" @271
 			    location   	(1003, 417)
 			    line_color 	3342489
-			    InterObjView 	@183
+			    InterObjView 	@270
 			    height     	160
 			    y_coord    	70
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @185
+			Focus_Of_Control 	(object Focus_Of_Control "" @272
 			    location   	(1003, 517)
 			    line_color 	3342489
-			    InterObjView 	@183
+			    InterObjView 	@270
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @186
+			Focus_Of_Control 	(object Focus_Of_Control "" @273
 			    location   	(1003, 987)
 			    line_color 	3342489
-			    InterObjView 	@183
+			    InterObjView 	@270
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @187
+			Focus_Of_Control 	(object Focus_Of_Control "" @274
 			    location   	(1003, 1141)
 			    line_color 	3342489
-			    InterObjView 	@183
+			    InterObjView 	@270
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @188
+			Focus_Of_Control 	(object Focus_Of_Control "" @275
 			    location   	(1003, 1716)
 			    line_color 	3342489
-			    InterObjView 	@183
+			    InterObjView 	@270
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Controller" @189
+		    (object InterObjView "Controller" @276
 			location   	(1625, 334)
 			font       	(object Font
 			    size       	10
@@ -4290,7 +6528,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@189
+			    Parent_View 	@276
 			    location   	(1625, 334)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -4308,49 +6546,49 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @190
+			Focus_Of_Control 	(object Focus_Of_Control "" @277
 			    location   	(1625, 414)
 			    line_color 	3342489
-			    InterObjView 	@189
+			    InterObjView 	@276
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @191
+			Focus_Of_Control 	(object Focus_Of_Control "" @278
 			    location   	(1625, 622)
 			    line_color 	3342489
-			    InterObjView 	@189
+			    InterObjView 	@276
 			    height     	195
 			    y_coord    	105
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @192
+			Focus_Of_Control 	(object Focus_Of_Control "" @279
 			    location   	(1625, 752)
 			    line_color 	3342489
-			    InterObjView 	@189
+			    InterObjView 	@276
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @193
+			Focus_Of_Control 	(object Focus_Of_Control "" @280
 			    location   	(1625, 882)
 			    line_color 	3342489
-			    InterObjView 	@189
+			    InterObjView 	@276
 			    height     	105
 			    y_coord    	15
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @194
+			Focus_Of_Control 	(object Focus_Of_Control "" @281
 			    location   	(1625, 1141)
 			    line_color 	3342489
-			    InterObjView 	@189
+			    InterObjView 	@276
 			    height     	195
 			    y_coord    	105
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @195
+			Focus_Of_Control 	(object Focus_Of_Control "" @282
 			    location   	(1625, 1611)
 			    line_color 	3342489
-			    InterObjView 	@189
+			    InterObjView 	@276
 			    height     	105
 			    y_coord    	15
 			    Nested     	FALSE))
-		    (object InterObjView "Camera" @196
+		    (object InterObjView "Camera" @283
 			location   	(2159, 328)
 			font       	(object Font
 			    size       	10
@@ -4363,7 +6601,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@196
+			    Parent_View 	@283
 			    location   	(2159, 328)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -4381,14 +6619,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @197
+			Focus_Of_Control 	(object Focus_Of_Control "" @284
 			    location   	(2159, 408)
 			    line_color 	3342489
-			    InterObjView 	@196
+			    InterObjView 	@283
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterObjView "Gallery" @198
+		    (object InterObjView "Gallery" @285
 			location   	(2628, 325)
 			font       	(object Font
 			    size       	10
@@ -4401,7 +6639,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@198
+			    Parent_View 	@285
 			    location   	(2628, 325)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -4419,35 +6657,35 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @199
+			Focus_Of_Control 	(object Focus_Of_Control "" @286
 			    location   	(2628, 405)
 			    line_color 	3342489
-			    InterObjView 	@198
+			    InterObjView 	@285
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @200
+			Focus_Of_Control 	(object Focus_Of_Control "" @287
 			    location   	(2628, 1246)
 			    line_color 	3342489
-			    InterObjView 	@198
+			    InterObjView 	@285
 			    height     	195
 			    y_coord    	105
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @201
+			Focus_Of_Control 	(object Focus_Of_Control "" @288
 			    location   	(2628, 1376)
 			    line_color 	3342489
-			    InterObjView 	@198
+			    InterObjView 	@285
 			    height     	195
 			    y_coord    	105
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @202
+			Focus_Of_Control 	(object Focus_Of_Control "" @289
 			    location   	(2628, 1506)
 			    line_color 	3342489
-			    InterObjView 	@198
+			    InterObjView 	@285
 			    height     	310
 			    y_coord    	220
 			    Nested     	TRUE))
-		    (object InterMessView "Нажатие кнопки \"Search for similar\" (в интернете/галерее)" @203
+		    (object InterMessView "Нажатие кнопки \"Search for similar\" (в интернете/галерее)" @290
 			location   	(0, 517)
 			font       	(object Font
 			    size       	10
@@ -4459,8 +6697,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @204
-			    Parent_View 	@203
+			label      	(object SegLabel @291
+			    Parent_View 	@290
 			    location   	(591, 421)
 			    font       	(object Font
 				size       	10
@@ -4475,7 +6713,7 @@
 			    quidu      	"5812825201BF"
 			    anchor_loc 	1
 			    nlines     	3
-			    max_width  	519
+			    max_width  	576
 			    justify    	0
 			    label      	
 |Нажатие кнопки "Search for similar" (в интернете/галерее)
@@ -4484,14 +6722,14 @@
 			    height     	97
 			    orientation 	0)
 			line_color 	3342489
-			client     	@181
-			supplier   	@183
-			Focus_Src  	@182
-			Focus_Entry 	@185
+			client     	@268
+			supplier   	@270
+			Focus_Src  	@269
+			Focus_Entry 	@272
 			origin     	(195, 517)
 			terminus   	(987, 517)
 			ordinal    	0)
-		    (object InterMessView "Запрос о поиске похожей фотографии в интернете" @205
+		    (object InterMessView "Запрос о поиске похожей фотографии в интернете" @292
 			location   	(0, 622)
 			font       	(object Font
 			    size       	10
@@ -4503,8 +6741,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @206
-			    Parent_View 	@205
+			label      	(object SegLabel @293
+			    Parent_View 	@292
 			    location   	(1319, 541)
 			    font       	(object Font
 				size       	10
@@ -4526,14 +6764,14 @@
 			    height     	82
 			    orientation 	0)
 			line_color 	3342489
-			client     	@183
-			supplier   	@189
-			Focus_Src  	@185
-			Focus_Entry 	@191
+			client     	@270
+			supplier   	@276
+			Focus_Src  	@272
+			Focus_Entry 	@278
 			origin     	(1018, 622)
 			terminus   	(1609, 622)
 			ordinal    	1)
-		    (object SelfMessView "Открытие сервиса \"Яндекс.Картинки\"" @207
+		    (object SelfMessView "Открытие сервиса \"Яндекс.Картинки\"" @294
 			location   	(0, 727)
 			font       	(object Font
 			    size       	10
@@ -4545,8 +6783,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @208
-			    Parent_View 	@207
+			label      	(object SegLabel @295
+			    Parent_View 	@294
 			    location   	(1874, 652)
 			    font       	(object Font
 				size       	10
@@ -4570,14 +6808,14 @@
 			    height     	76
 			    orientation 	0)
 			line_color 	3342489
-			client     	@189
-			supplier   	@189
-			Focus_Src  	@191
-			Focus_Entry 	@192
+			client     	@276
+			supplier   	@276
+			Focus_Src  	@278
+			Focus_Entry 	@279
 			origin     	(1641, 727)
 			terminus   	(1791, 727)
 			ordinal    	2)
-		    (object SelfMessView "Поиск похожей фотографии" @209
+		    (object SelfMessView "Поиск похожей фотографии" @296
 			location   	(0, 857)
 			font       	(object Font
 			    size       	10
@@ -4589,8 +6827,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @210
-			    Parent_View 	@209
+			label      	(object SegLabel @297
+			    Parent_View 	@296
 			    location   	(1905, 815)
 			    font       	(object Font
 				size       	10
@@ -4612,14 +6850,14 @@
 			    height     	43
 			    orientation 	0)
 			line_color 	3342489
-			client     	@189
-			supplier   	@189
-			Focus_Src  	@192
-			Focus_Entry 	@193
+			client     	@276
+			supplier   	@276
+			Focus_Src  	@279
+			Focus_Entry 	@280
 			origin     	(1641, 857)
 			terminus   	(1791, 857)
 			ordinal    	3)
-		    (object InterMessView "Отображение похожей фотографии" @211
+		    (object InterMessView "Отображение похожей фотографии" @298
 			location   	(0, 987)
 			font       	(object Font
 			    size       	10
@@ -4631,8 +6869,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @212
-			    Parent_View 	@211
+			label      	(object SegLabel @299
+			    Parent_View 	@298
 			    location   	(1314, 908)
 			    font       	(object Font
 				size       	10
@@ -4647,21 +6885,21 @@
 			    quidu      	"58128395005A"
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	413
+			    max_width  	485
 			    justify    	0
 			    label      	"Отображение похожей фотографии"
 			    pctDist    	0.500000
 			    height     	80
 			    orientation 	1)
 			line_color 	3342489
-			client     	@189
-			supplier   	@183
-			Focus_Src  	@193
-			Focus_Entry 	@186
+			client     	@276
+			supplier   	@270
+			Focus_Src  	@280
+			Focus_Entry 	@273
 			origin     	(1609, 987)
 			terminus   	(1019, 987)
 			ordinal    	4)
-		    (object InterMessView "Запрос о поиске похожей фотографии в галерее" @213
+		    (object InterMessView "Запрос о поиске похожей фотографии в галерее" @300
 			location   	(0, 1141)
 			font       	(object Font
 			    size       	10
@@ -4673,8 +6911,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @214
-			    Parent_View 	@213
+			label      	(object SegLabel @301
+			    Parent_View 	@300
 			    location   	(1316, 1076)
 			    font       	(object Font
 				size       	10
@@ -4696,14 +6934,14 @@
 			    height     	66
 			    orientation 	0)
 			line_color 	3342489
-			client     	@183
-			supplier   	@189
-			Focus_Src  	@187
-			Focus_Entry 	@194
+			client     	@270
+			supplier   	@276
+			Focus_Src  	@274
+			Focus_Entry 	@281
 			origin     	(1018, 1141)
 			terminus   	(1609, 1141)
 			ordinal    	5)
-		    (object InterMessView "Запрос на использование галереи" @215
+		    (object InterMessView "Запрос на использование галереи" @302
 			location   	(0, 1246)
 			font       	(object Font
 			    size       	10
@@ -4715,8 +6953,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @216
-			    Parent_View 	@215
+			label      	(object SegLabel @303
+			    Parent_View 	@302
 			    location   	(2126, 1202)
 			    font       	(object Font
 				size       	10
@@ -4738,14 +6976,14 @@
 			    height     	45
 			    orientation 	0)
 			line_color 	3342489
-			client     	@189
-			supplier   	@198
-			Focus_Src  	@194
-			Focus_Entry 	@200
+			client     	@276
+			supplier   	@285
+			Focus_Src  	@281
+			Focus_Entry 	@287
 			origin     	(1640, 1246)
 			terminus   	(2612, 1246)
 			ordinal    	6)
-		    (object SelfMessView "Открытие галереи" @217
+		    (object SelfMessView "Открытие галереи" @304
 			location   	(0, 1351)
 			font       	(object Font
 			    size       	10
@@ -4757,8 +6995,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @218
-			    Parent_View 	@217
+			label      	(object SegLabel @305
+			    Parent_View 	@304
 			    location   	(2857, 1305)
 			    font       	(object Font
 				size       	10
@@ -4780,14 +7018,14 @@
 			    height     	47
 			    orientation 	0)
 			line_color 	3342489
-			client     	@198
-			supplier   	@198
-			Focus_Src  	@200
-			Focus_Entry 	@201
+			client     	@285
+			supplier   	@285
+			Focus_Src  	@287
+			Focus_Entry 	@288
 			origin     	(2644, 1351)
 			terminus   	(2794, 1351)
 			ordinal    	7)
-		    (object SelfMessView "Поиск похожей фотографии" @219
+		    (object SelfMessView "Поиск похожей фотографии" @306
 			location   	(0, 1481)
 			font       	(object Font
 			    size       	10
@@ -4799,8 +7037,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @220
-			    Parent_View 	@219
+			label      	(object SegLabel @307
+			    Parent_View 	@306
 			    location   	(2929, 1465)
 			    font       	(object Font
 				size       	10
@@ -4822,14 +7060,14 @@
 			    height     	17
 			    orientation 	0)
 			line_color 	3342489
-			client     	@198
-			supplier   	@198
-			Focus_Src  	@201
-			Focus_Entry 	@202
+			client     	@285
+			supplier   	@285
+			Focus_Src  	@288
+			Focus_Entry 	@289
 			origin     	(2644, 1481)
 			terminus   	(2794, 1481)
 			ordinal    	8)
-		    (object InterMessView "Отправка похожей фотографии" @221
+		    (object InterMessView "Отправка похожей фотографии" @308
 			location   	(0, 1611)
 			font       	(object Font
 			    size       	10
@@ -4841,8 +7079,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @222
-			    Parent_View 	@221
+			label      	(object SegLabel @309
+			    Parent_View 	@308
 			    location   	(2127, 1567)
 			    font       	(object Font
 				size       	10
@@ -4864,14 +7102,14 @@
 			    height     	45
 			    orientation 	1)
 			line_color 	3342489
-			client     	@198
-			supplier   	@189
-			Focus_Src  	@202
-			Focus_Entry 	@195
+			client     	@285
+			supplier   	@276
+			Focus_Src  	@289
+			Focus_Entry 	@282
 			origin     	(2612, 1611)
 			terminus   	(1641, 1611)
 			ordinal    	9)
-		    (object InterMessView "Отображение похожей фотографии" @223
+		    (object InterMessView "Отображение похожей фотографии" @310
 			location   	(0, 1716)
 			font       	(object Font
 			    size       	10
@@ -4883,9 +7121,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @224
-			    Parent_View 	@223
-			    location   	(1299, 1642)
+			label      	(object SegLabel @311
+			    Parent_View 	@310
+			    location   	(1298, 1642)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -4906,10 +7144,10 @@
 			    height     	75
 			    orientation 	1)
 			line_color 	3342489
-			client     	@189
-			supplier   	@183
-			Focus_Src  	@195
-			Focus_Entry 	@188
+			client     	@276
+			supplier   	@270
+			Focus_Src  	@282
+			Focus_Entry 	@275
 			origin     	(1609, 1716)
 			terminus   	(1019, 1716)
 			ordinal    	10)))
@@ -4923,7 +7161,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object InterObjView "User" @225
+		    (object InterObjView "User" @312
 			location   	(194, 325)
 			font       	(object Font
 			    size       	10
@@ -4936,7 +7174,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@225
+			    Parent_View 	@312
 			    location   	(194, 325)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -4954,14 +7192,14 @@
 			icon_width 	120
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @226
+			Focus_Of_Control 	(object Focus_Of_Control "" @313
 			    location   	(194, 405)
 			    line_color 	3342489
-			    InterObjView 	@225
+			    InterObjView 	@312
 			    height     	154
 			    y_coord    	64
 			    Nested     	FALSE))
-		    (object InterObjView "GUI" @227
+		    (object InterObjView "GUI" @314
 			location   	(919, 318)
 			font       	(object Font
 			    size       	10
@@ -4974,7 +7212,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@227
+			    Parent_View 	@314
 			    location   	(919, 318)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -4992,28 +7230,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @228
+			Focus_Of_Control 	(object Focus_Of_Control "" @315
 			    location   	(919, 398)
 			    line_color 	3342489
-			    InterObjView 	@227
+			    InterObjView 	@314
 			    height     	131
 			    y_coord    	41
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @229
+			Focus_Of_Control 	(object Focus_Of_Control "" @316
 			    location   	(919, 469)
 			    line_color 	3342489
-			    InterObjView 	@227
+			    InterObjView 	@314
 			    height     	650
 			    y_coord    	560
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @230
+			Focus_Of_Control 	(object Focus_Of_Control "" @317
 			    location   	(919, 1019)
 			    line_color 	3342489
-			    InterObjView 	@227
+			    InterObjView 	@314
 			    height     	1
 			    y_coord    	-89
 			    Nested     	TRUE))
-		    (object InterObjView "Controller" @231
+		    (object InterObjView "Controller" @318
 			location   	(1631, 309)
 			font       	(object Font
 			    size       	10
@@ -5026,7 +7264,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@231
+			    Parent_View 	@318
 			    location   	(1631, 309)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -5044,28 +7282,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @232
+			Focus_Of_Control 	(object Focus_Of_Control "" @319
 			    location   	(1631, 389)
 			    line_color 	3342489
-			    InterObjView 	@231
+			    InterObjView 	@318
 			    height     	245
 			    y_coord    	155
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @233
+			Focus_Of_Control 	(object Focus_Of_Control "" @320
 			    location   	(1631, 574)
 			    line_color 	3342489
-			    InterObjView 	@231
+			    InterObjView 	@318
 			    height     	445
 			    y_coord    	355
 			    Nested     	TRUE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @234
+			Focus_Of_Control 	(object Focus_Of_Control "" @321
 			    location   	(1631, 914)
 			    line_color 	3342489
-			    InterObjView 	@231
+			    InterObjView 	@318
 			    height     	1
 			    y_coord    	-89
 			    Nested     	TRUE))
-		    (object InterObjView "Camera" @235
+		    (object InterObjView "Camera" @322
 			location   	(2146, 300)
 			font       	(object Font
 			    size       	10
@@ -5078,7 +7316,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@235
+			    Parent_View 	@322
 			    location   	(2146, 300)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -5096,28 +7334,28 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @236
+			Focus_Of_Control 	(object Focus_Of_Control "" @323
 			    location   	(2146, 380)
 			    line_color 	3342489
-			    InterObjView 	@235
+			    InterObjView 	@322
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @237
+			Focus_Of_Control 	(object Focus_Of_Control "" @324
 			    location   	(2146, 679)
 			    line_color 	3342489
-			    InterObjView 	@235
+			    InterObjView 	@322
 			    height     	235
 			    y_coord    	145
 			    Nested     	FALSE)
-			Focus_Of_Control 	(object Focus_Of_Control "" @238
+			Focus_Of_Control 	(object Focus_Of_Control "" @325
 			    location   	(2146, 809)
 			    line_color 	3342489
-			    InterObjView 	@235
+			    InterObjView 	@322
 			    height     	90
 			    y_coord    	0
 			    Nested     	TRUE))
-		    (object InterObjView "Gallery" @239
+		    (object InterObjView "Gallery" @326
 			location   	(2634, 297)
 			font       	(object Font
 			    size       	10
@@ -5130,7 +7368,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@239
+			    Parent_View 	@326
 			    location   	(2634, 297)
 			    fill_color 	13434879
 			    anchor_loc 	1
@@ -5148,14 +7386,14 @@
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
-			Focus_Of_Control 	(object Focus_Of_Control "" @240
+			Focus_Of_Control 	(object Focus_Of_Control "" @327
 			    location   	(2634, 377)
 			    line_color 	3342489
-			    InterObjView 	@239
+			    InterObjView 	@326
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE))
-		    (object InterMessView "Нажатие кнопки \"Create photo\"" @241
+		    (object InterMessView "Нажатие кнопки \"Create photo\"" @328
 			location   	(0, 469)
 			font       	(object Font
 			    size       	10
@@ -5167,8 +7405,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @242
-			    Parent_View 	@241
+			label      	(object SegLabel @329
+			    Parent_View 	@328
 			    location   	(559, 390)
 			    font       	(object Font
 				size       	10
@@ -5192,14 +7430,14 @@
 			    height     	80
 			    orientation 	0)
 			line_color 	3342489
-			client     	@225
-			supplier   	@227
-			Focus_Src  	@226
-			Focus_Entry 	@229
+			client     	@312
+			supplier   	@314
+			Focus_Src  	@313
+			Focus_Entry 	@316
 			origin     	(209, 469)
 			terminus   	(903, 469)
 			ordinal    	0)
-		    (object InterMessView "Сообщение контроллеру о необходимости использования камеры" @243
+		    (object InterMessView "Сообщение контроллеру о необходимости использования камеры" @330
 			location   	(0, 574)
 			font       	(object Font
 			    size       	10
@@ -5211,8 +7449,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @244
-			    Parent_View 	@243
+			label      	(object SegLabel @331
+			    Parent_View 	@330
 			    location   	(1289, 477)
 			    font       	(object Font
 				size       	10
@@ -5234,14 +7472,14 @@
 			    height     	98
 			    orientation 	0)
 			line_color 	3342489
-			client     	@227
-			supplier   	@231
-			Focus_Src  	@229
-			Focus_Entry 	@233
+			client     	@314
+			supplier   	@318
+			Focus_Src  	@316
+			Focus_Entry 	@320
 			origin     	(934, 574)
 			terminus   	(1615, 574)
 			ordinal    	1)
-		    (object InterMessView "Запрос на использование камеры" @245
+		    (object InterMessView "Запрос на использование камеры" @332
 			location   	(0, 679)
 			font       	(object Font
 			    size       	10
@@ -5253,8 +7491,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @246
-			    Parent_View 	@245
+			label      	(object SegLabel @333
+			    Parent_View 	@332
 			    location   	(1881, 562)
 			    font       	(object Font
 				size       	10
@@ -5276,14 +7514,14 @@
 			    height     	118
 			    orientation 	0)
 			line_color 	3342489
-			client     	@231
-			supplier   	@235
-			Focus_Src  	@233
-			Focus_Entry 	@237
+			client     	@318
+			supplier   	@322
+			Focus_Src  	@320
+			Focus_Entry 	@324
 			origin     	(1646, 679)
 			terminus   	(2130, 679)
 			ordinal    	2)
-		    (object InterMessView "Отправка фотографии" @247
+		    (object InterMessView "Отправка фотографии" @334
 			location   	(0, 914)
 			font       	(object Font
 			    size       	10
@@ -5295,9 +7533,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @248
-			    Parent_View 	@247
-			    location   	(1891, 862)
+			label      	(object SegLabel @335
+			    Parent_View 	@334
+			    location   	(1892, 862)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -5318,14 +7556,14 @@
 			    height     	53
 			    orientation 	1)
 			line_color 	3342489
-			client     	@235
-			supplier   	@231
-			Focus_Src  	@237
-			Focus_Entry 	@234
+			client     	@322
+			supplier   	@318
+			Focus_Src  	@324
+			Focus_Entry 	@321
 			origin     	(2130, 914)
 			terminus   	(1647, 914)
 			ordinal    	4)
-		    (object InterMessView "Отображение фотографии" @249
+		    (object InterMessView "Отображение фотографии" @336
 			location   	(0, 1019)
 			font       	(object Font
 			    size       	10
@@ -5337,8 +7575,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @250
-			    Parent_View 	@249
+			label      	(object SegLabel @337
+			    Parent_View 	@336
 			    location   	(1275, 975)
 			    font       	(object Font
 				size       	10
@@ -5360,14 +7598,14 @@
 			    height     	45
 			    orientation 	1)
 			line_color 	3342489
-			client     	@231
-			supplier   	@227
-			Focus_Src  	@233
-			Focus_Entry 	@230
+			client     	@318
+			supplier   	@314
+			Focus_Src  	@320
+			Focus_Entry 	@317
 			origin     	(1615, 1019)
 			terminus   	(935, 1019)
 			ordinal    	5)
-		    (object SelfMessView "Фотографирование" @251
+		    (object SelfMessView "Фотографирование" @338
 			location   	(0, 784)
 			font       	(object Font
 			    size       	10
@@ -5379,8 +7617,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @252
-			    Parent_View 	@251
+			label      	(object SegLabel @339
+			    Parent_View 	@338
 			    location   	(2401, 733)
 			    font       	(object Font
 				size       	10
@@ -5402,16 +7640,92 @@
 			    height     	52
 			    orientation 	0)
 			line_color 	3342489
-			client     	@235
-			supplier   	@235
-			Focus_Src  	@237
-			Focus_Entry 	@238
+			client     	@322
+			supplier   	@322
+			Focus_Src  	@324
+			Focus_Entry 	@325
 			origin     	(2162, 784)
 			terminus   	(2312, 784)
 			ordinal    	3)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"580E450F0246"
-	physical_models 	(list unit_reference_list)
+	physical_models 	(list unit_reference_list
+	    (object module "Controller" "NotAModuleType" "NotAModulePart"
+		quid       	"5820F29600C4"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"5820F3D9014F"
+			supplier   	"Component View::Camera"
+			quidu      	"5820F3AD02E5"
+			supplier_is_spec 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"5820F4070170"
+			supplier   	"Component View::Client"
+			quidu      	"5820F2E7033C"
+			supplier_is_spec 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"5820F604030F"
+			supplier   	"Component View::Gallery"
+			quidu      	"5820F5DF02EE"
+			supplier_is_spec 	TRUE))
+		language   	"")
+	    (object module "Client" "NotAModuleType" "NotAModulePart"
+		quid       	"5820F2E7033C"
+		stereotype 	"Application"
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"5820F3E50287"
+			supplier   	"Component View::Controller"
+			quidu      	"5820F29600C4"
+			supplier_is_spec 	TRUE))
+		language   	"")
+	    (object module "NewSubprogSpec" "SubType" "Specification"
+		quid       	"5820F33C0364"
+		stereotype 	"Subprogram Specification"
+		language   	"")
+	    (object module "NewTaskBody" "TaskType" "Body"
+		quid       	"5820F3440215"
+		stereotype 	"Task Body"
+		language   	"")
+	    (object module "NewSubprogSpec2" "SubType" "Specification"
+		quid       	"5820F3A7037C"
+		stereotype 	"Subprogram Specification"
+		language   	"")
+	    (object module "Camera" "NotAModuleType" "NotAModulePart"
+		quid       	"5820F3AD02E5"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"5820F3DD023F"
+			supplier   	"Component View::Client"
+			quidu      	"5820F2E7033C"
+			supplier_is_spec 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"5820F65D0027"
+			supplier   	"Component View::Controller"
+			quidu      	"5820F29600C4"
+			supplier_is_spec 	TRUE))
+		language   	"")
+	    (object module "Gallery" "NotAModuleType" "NotAModulePart"
+		quid       	"5820F5DF02EE"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"5820F63D0117"
+			supplier   	"Component View::Client"
+			quidu      	"5820F2E7033C"
+			supplier_is_spec 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"5820F66102EF"
+			supplier   	"Component View::Controller"
+			quidu      	"5820F29600C4"
+			supplier_is_spec 	TRUE))
+		language   	"")
+	    (object SubSystem "NewPackage"
+		quid       	"5820F3A4023D"
+		physical_models 	(list unit_reference_list)
+		physical_presentations 	(list unit_reference_list)))
 	physical_presentations 	(list unit_reference_list
 	    (object Module_Diagram "Main"
 		quid       	"580E45100117"
@@ -5421,12 +7735,302 @@
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
-		items      	(list diagram_item_list)))
+		items      	(list diagram_item_list
+		    (object ModView "Component View::Controller" "NotAModuleType" "NotAModulePart" @340
+			location   	(1162, 443)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@340
+			    location   	(1115, 418)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	177
+			    justify    	1
+			    label      	"Controller")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5820F29600C4"
+			width      	318
+			autoResize 	TRUE
+			width      	318
+			height     	162)
+		    (object ModView "Component View::Client" "NotAModuleType" "NotAModulePart" @341
+			location   	(1164, 875)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@341
+			    location   	(1078, 900)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	323
+			    justify    	1
+			    label      	"Client")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@341
+			    location   	(1078, 825)
+			    fill_color 	13434879
+			    anchor     	10
+			    anchor_loc 	3
+			    nlines     	1
+			    max_width  	300
+			    justify    	1
+			    label      	"<<Application>>")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5820F2E7033C"
+			width      	582
+			autoResize 	TRUE
+			width      	582
+			height     	162)
+		    (object ModView "Component View::Camera" "NotAModuleType" "NotAModulePart" @342
+			location   	(1912, 872)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@342
+			    location   	(1865, 847)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	173
+			    justify    	1
+			    label      	"Camera")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5820F3AD02E5"
+			width      	312
+			autoResize 	TRUE
+			width      	312
+			height     	162)
+		    (object ModVisView "" @343
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F3D9014F"
+			client     	@340
+			supplier   	@342
+			vertices   	(list Points
+			    (1300, 521)
+			    (1770, 792))
+			line_style 	0)
+		    (object ModVisView "" @344
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F4070170"
+			client     	@340
+			supplier   	@341
+			vertices   	(list Points
+			    (1162, 521)
+			    (1161, 795))
+			line_style 	0)
+		    (object ModView "Component View::Gallery" "NotAModuleType" "NotAModulePart" @345
+			location   	(459, 878)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@345
+			    location   	(413, 853)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	170
+			    justify    	1
+			    label      	"Gallery")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5820F5DF02EE"
+			width      	306
+			autoResize 	TRUE
+			width      	306
+			height     	162)
+		    (object ModVisView "" @346
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F604030F"
+			client     	@340
+			supplier   	@345
+			vertices   	(list Points
+			    (1029, 521)
+			    (582, 798))
+			line_style 	0)
+		    (object ModVisView "" @347
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F63D0117"
+			client     	@345
+			supplier   	@341
+			vertices   	(list Points
+			    (607, 874)
+			    (876, 875))
+			line_style 	0)
+		    (object ModVisView "" @348
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F65D0027"
+			client     	@342
+			supplier   	@340
+			vertices   	(list Points
+			    (1770, 792)
+			    (1300, 521))
+			line_style 	0)
+		    (object ModVisView "" @349
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F66102EF"
+			client     	@345
+			supplier   	@340
+			vertices   	(list Points
+			    (582, 798)
+			    (1029, 521))
+			line_style 	0)
+		    (object ModVisView "" @350
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F3DD023F"
+			client     	@342
+			supplier   	@341
+			vertices   	(list Points
+			    (1756, 872)
+			    (1443, 871))
+			line_style 	0)
+		    (object ModVisView "" @351
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5820F3E50287"
+			client     	@341
+			supplier   	@340
+			vertices   	(list Points
+			    (1161, 795)
+			    (1162, 521))
+			line_style 	0))))
 	category   	"Logical View"
 	quidu      	"580E450F0244")
     process_structure 	(object Processes
 	quid       	"580E450F0247"
 	ProcsNDevs 	(list
+	    (object Processor "Android device"
+		quid       	"5820F7580055"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"5820F81E0307"
+			stereotype 	"use"
+			supplier   	"Camera"
+			quidu      	"5820F7330305"
+			supplier_is_device 	TRUE)
+		    (object Connection_Relationship
+			quid       	"5820F9000268"
+			stereotype 	"use"
+			supplier   	"Gallery"
+			quidu      	"5820F7E103C5"
+			supplier_is_device 	TRUE))
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "NewProcessor"
+		quid       	"5820F8E2028D"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Camera."
+		quid       	"5820FA320125"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"5821021702FF"
+			stereotype 	"use"
+			supplier   	"Controller."
+			quidu      	"5820FB2602FD"
+			supplier_is_device 	FALSE))
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Gallery."
+		quid       	"5820FA4B0295"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"582101D80207"
+			stereotype 	"use"
+			supplier   	"Android device."
+			quidu      	"5820F9F102ED"
+			supplier_is_device 	TRUE)
+		    (object Connection_Relationship
+			quid       	"582102100340"
+			stereotype 	"use"
+			supplier   	"Controller."
+			quidu      	"5820FB2602FD"
+			supplier_is_device 	FALSE))
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Controller."
+		quid       	"5820FB2602FD"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Device "Camera"
+		quid       	"5820F7330305"
+		characteristics 	"")
+	    (object Device "Gallery"
+		quid       	"5820F7E103C5"
+		characteristics 	"")
+	    (object Device "Android device."
+		quid       	"5820F9F102ED"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"5820FA8B030F"
+			stereotype 	"use"
+			supplier   	"Camera."
+			quidu      	"5820FA320125"
+			supplier_is_device 	FALSE)
+		    (object Connection_Relationship
+			quid       	"5820FA8F01D7"
+			supplier   	"Gallery."
+			quidu      	"5820FA4B0295"
+			supplier_is_device 	FALSE)
+		    (object Connection_Relationship
+			quid       	"5821021401E0"
+			supplier   	"Controller."
+			quidu      	"5820FB2602FD"
+			supplier_is_device 	FALSE))
+		characteristics 	"")
 	    (object Process_Diagram "Deployment View"
 		quid       	"580E450F0249"
 		title      	"Deployment View"
@@ -5434,8 +8038,410 @@
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	0
-		items      	(list diagram_item_list))))
+		origin_y   	247
+		items      	(list diagram_item_list
+		    (object NoteView @352
+			location   	(1380, 1292)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@352
+			    location   	(1155, 1198)
+			    fill_color 	13434879
+			    nlines     	3
+			    max_width  	415
+			    justify    	1
+			    label      	"<<Application>> Client")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	475
+			height     	200)
+		    (object DeviceView "Android device." @353
+			location   	(1411, 1173)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@353
+			    location   	(1116, 970)
+			    nlines     	2
+			    max_width  	519
+			    justify    	0
+			    label      	"Android device.")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5820F9F102ED"
+			width      	594
+			height     	475
+			annotation 	0)
+		    (object ProcessorView "Camera." @354
+			location   	(2447, 1172)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@354
+			    location   	(2146, 966)
+			    nlines     	2
+			    max_width  	531
+			    justify    	0
+			    label      	"Camera.")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5820FA320125"
+			width      	606
+			height     	481
+			annotation 	0)
+		    (object ProcessorView "Gallery." @355
+			location   	(455, 1173)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@355
+			    location   	(154, 967)
+			    nlines     	2
+			    max_width  	531
+			    justify    	0
+			    label      	"Gallery.")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5820FA4B0295"
+			width      	606
+			height     	482
+			annotation 	0)
+		    (object NoteView @356
+			location   	(2414, 1281)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@356
+			    location   	(2195, 1181)
+			    fill_color 	13434879
+			    nlines     	4
+			    max_width  	403
+			    justify    	1
+			    label      	"Camera")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	463
+			height     	212)
+		    (object NoteView @357
+			location   	(426, 1292)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@357
+			    location   	(213, 1195)
+			    fill_color 	13434879
+			    nlines     	3
+			    max_width  	390
+			    justify    	1
+			    label      	"Gallery")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	450
+			height     	207)
+		    (object ProcessorView "Controller." @358
+			location   	(1413, 492)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@358
+			    location   	(1115, 286)
+			    nlines     	2
+			    max_width  	525
+			    justify    	0
+			    label      	"Controller.")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5820FB2602FD"
+			width      	600
+			height     	482
+			annotation 	0)
+		    (object NoteView @359
+			location   	(1389, 608)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@359
+			    location   	(1182, 517)
+			    fill_color 	13434879
+			    nlines     	3
+			    max_width  	378
+			    justify    	1
+			    label      	"Controller")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	438
+			height     	194)
+		    (object ConnectionView "" @360
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@360
+			    location   	(921, 1173)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"")
+			stereotype 	(object SegLabel @361
+			    Parent_View 	@360
+			    location   	(957, 1113)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<use>>"
+			    pctDist    	0.594315
+			    height     	60
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"582101D80207"
+			client     	@355
+			supplier   	@353
+			vertices   	(list Points
+			    (727, 1173)
+			    (1114, 1173))
+			line_style 	0)
+		    (object ConnectionView "" @362
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@362
+			    location   	(1911, 1172)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"")
+			stereotype 	(object SegLabel @363
+			    Parent_View 	@362
+			    location   	(1923, 1115)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<use>>"
+			    pctDist    	0.527030
+			    height     	57
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"5820FA8B030F"
+			client     	@353
+			supplier   	@354
+			vertices   	(list Points
+			    (1677, 1173)
+			    (2144, 1172))
+			line_style 	0)
+		    (object ConnectionView "" @364
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@364
+			    location   	(920, 833)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"")
+			stereotype 	(object SegLabel @365
+			    Parent_View 	@364
+			    location   	(817, 775)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<use>>"
+			    pctDist    	0.500000
+			    height     	120
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"582102100340"
+			client     	@355
+			supplier   	@358
+			vertices   	(list Points
+			    (727, 1173)
+			    (1113, 492))
+			line_style 	0)
+		    (object ConnectionView "" @366
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5821021401E0"
+			client     	@353
+			supplier   	@358
+			vertices   	(list Points
+			    (1411, 951)
+			    (1413, 733))
+			line_style 	0)
+		    (object ConnectionView "" @367
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@367
+			    location   	(1913, 832)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"")
+			stereotype 	(object SegLabel @368
+			    Parent_View 	@367
+			    location   	(2004, 783)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<use>>"
+			    pctDist    	0.487095
+			    height     	103
+			    orientation 	1)
+			line_color 	3342489
+			quidu      	"5821021702FF"
+			client     	@354
+			supplier   	@358
+			vertices   	(list Points
+			    (2144, 1172)
+			    (1682, 492))
+			line_style 	0)))))
     properties 	(object Properties
 	attributes 	(list Attribute_Set
 	    (object Attribute
@@ -7057,7 +10063,7 @@
 		    (object Attribute
 			tool       	"Java"
 			name       	"ClassPath"
-			value      	";C:\\Program Files\\Java\\jdk1.8.0_102\\jre\\lib\\rt.jar;C:\\Program Files\\Java\\jdk1.8.0_102\\lib\\dt.jar;C:\\Program Files\\Java\\jdk1.8.0_102\\lib\\tools.jar")
+			value      	"")
 		    (object Attribute
 			tool       	"Java"
 			name       	"ReferenceClasspath"
