@@ -342,7 +342,7 @@
 				supplier   	@1
 				vertices   	(list Points
 				    (898, 1022)
-				    (708, 1055))
+				    (708, 1054))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$2" @9
 				Parent_View 	@7
@@ -354,7 +354,7 @@
 				supplier   	@6
 				vertices   	(list Points
 				    (898, 1022)
-				    (1089, 989))
+				    (1089, 988))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$3" @10
 			location   	(1004, 835)
@@ -382,7 +382,7 @@
 				supplier   	@2
 				vertices   	(list Points
 				    (1004, 835)
-				    (919, 749))
+				    (957, 788))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$5" @12
 				Parent_View 	@10
@@ -394,7 +394,7 @@
 				supplier   	@6
 				vertices   	(list Points
 				    (1004, 835)
-				    (1089, 921))
+				    (1087, 919))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$6" @13
 			location   	(1285, 839)
@@ -422,7 +422,7 @@
 				supplier   	@3
 				vertices   	(list Points
 				    (1285, 839)
-				    (1366, 757))
+				    (1475, 650))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$8" @15
 				Parent_View 	@13
@@ -462,7 +462,7 @@
 				supplier   	@4
 				vertices   	(list Points
 				    (1372, 1011)
-				    (1540, 1035))
+				    (1538, 1033))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$11" @18
 				Parent_View 	@16
@@ -514,7 +514,7 @@
 				supplier   	@6
 				vertices   	(list Points
 				    (1149, 1253)
-				    (1149, 1166))
+				    (1148, 1166))
 				line_style 	0)))))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"580E450F0244"
@@ -7678,6 +7678,21 @@
 			quid       	"5820F3E50287"
 			supplier   	"Component View::Controller"
 			quidu      	"5820F29600C4"
+			supplier_is_spec 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"58218A6E02DF"
+			supplier   	"Component View::Gallery"
+			quidu      	"5820F5DF02EE"
+			supplier_is_spec 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"58218A710386"
+			supplier   	"Component View::InternetService (Яндекс.Картинки)"
+			quidu      	"58218A1402B4"
+			supplier_is_spec 	TRUE)
+		    (object Module_Visibility_Relationship
+			quid       	"58218A740333"
+			supplier   	"Component View::Camera"
+			quidu      	"5820F3AD02E5"
 			supplier_is_spec 	TRUE))
 		language   	"")
 	    (object module "NewSubprogSpec" "SubType" "Specification"
@@ -7722,6 +7737,16 @@
 			quidu      	"5820F29600C4"
 			supplier_is_spec 	TRUE))
 		language   	"")
+	    (object module "InternetService (Яндекс.Картинки)" "NotAModuleType" "NotAModulePart"
+		quid       	"58218A1402B4"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"58218A6301D8"
+			supplier   	"Component View::Client"
+			quidu      	"5820F2E7033C"
+			supplier_is_spec 	TRUE))
+		language   	"")
 	    (object SubSystem "NewPackage"
 		quid       	"5820F3A4023D"
 		physical_models 	(list unit_reference_list)
@@ -7736,8 +7761,8 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ModView "Component View::Controller" "NotAModuleType" "NotAModulePart" @340
-			location   	(1162, 443)
+		    (object ModView "Component View::Client" "NotAModuleType" "NotAModulePart" @340
+			location   	(1167, 471)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -7750,23 +7775,33 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@340
-			    location   	(1115, 418)
+			    location   	(1080, 496)
 			    fill_color 	13434879
 			    anchor_loc 	3
 			    nlines     	2
-			    max_width  	177
+			    max_width  	330
 			    justify    	1
-			    label      	"Controller")
+			    label      	"Client")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@340
+			    location   	(1080, 421)
+			    fill_color 	13434879
+			    anchor     	10
+			    anchor_loc 	3
+			    nlines     	1
+			    max_width  	310
+			    justify    	1
+			    label      	"<<Application>>")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"5820F29600C4"
-			width      	318
+			quidu      	"5820F2E7033C"
+			width      	594
 			autoResize 	TRUE
-			width      	318
+			width      	594
 			height     	162)
-		    (object ModView "Component View::Client" "NotAModuleType" "NotAModulePart" @341
-			location   	(1164, 875)
+		    (object ModView "Component View::Camera" "NotAModuleType" "NotAModulePart" @341
+			location   	(1828, 897)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -7779,33 +7814,23 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@341
-			    location   	(1078, 900)
+			    location   	(1775, 872)
 			    fill_color 	13434879
 			    anchor_loc 	3
 			    nlines     	2
-			    max_width  	323
+			    max_width  	198
 			    justify    	1
-			    label      	"Client")
-			stereotype 	(object ItemLabel
-			    Parent_View 	@341
-			    location   	(1078, 825)
-			    fill_color 	13434879
-			    anchor     	10
-			    anchor_loc 	3
-			    nlines     	1
-			    max_width  	300
-			    justify    	1
-			    label      	"<<Application>>")
+			    label      	"Camera")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"5820F2E7033C"
-			width      	582
+			quidu      	"5820F3AD02E5"
+			width      	357
 			autoResize 	TRUE
-			width      	582
+			width      	357
 			height     	162)
-		    (object ModView "Component View::Camera" "NotAModuleType" "NotAModulePart" @342
-			location   	(1912, 872)
+		    (object ModView "Component View::Gallery" "NotAModuleType" "NotAModulePart" @342
+			location   	(503, 897)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -7818,43 +7843,33 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@342
-			    location   	(1865, 847)
+			    location   	(445, 872)
 			    fill_color 	13434879
 			    anchor_loc 	3
 			    nlines     	2
-			    max_width  	173
+			    max_width  	215
 			    justify    	1
-			    label      	"Camera")
+			    label      	"Gallery")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"5820F3AD02E5"
-			width      	312
+			quidu      	"5820F5DF02EE"
+			width      	388
 			autoResize 	TRUE
-			width      	312
+			width      	388
 			height     	162)
 		    (object ModVisView "" @343
 			stereotype 	TRUE
 			line_color 	3342489
-			quidu      	"5820F3D9014F"
-			client     	@340
-			supplier   	@342
+			quidu      	"5820F63D0117"
+			client     	@342
+			supplier   	@340
 			vertices   	(list Points
-			    (1300, 521)
-			    (1770, 792))
+			    (622, 817)
+			    (1031, 549))
 			line_style 	0)
-		    (object ModVisView "" @344
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5820F4070170"
-			client     	@340
-			supplier   	@341
-			vertices   	(list Points
-			    (1162, 521)
-			    (1161, 795))
-			line_style 	0)
-		    (object ModView "Component View::Gallery" "NotAModuleType" "NotAModulePart" @345
-			location   	(459, 878)
+		    (object ModView "Component View::InternetService (Яндекс.Картинки)" "NotAModuleType" "NotAModulePart" @344
+			location   	(1176, 892)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -7866,81 +7881,51 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@345
-			    location   	(413, 853)
+			    Parent_View 	@344
+			    location   	(1083, 867)
 			    fill_color 	13434879
 			    anchor_loc 	3
 			    nlines     	2
-			    max_width  	170
+			    max_width  	351
 			    justify    	1
-			    label      	"Gallery")
+			    label      	"InternetService (Яндекс.Картинки)")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"5820F5DF02EE"
-			width      	306
+			quidu      	"58218A1402B4"
+			width      	632
 			autoResize 	TRUE
-			width      	306
+			width      	632
 			height     	162)
+		    (object ModVisView "" @345
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58218A6E02DF"
+			client     	@340
+			supplier   	@342
+			vertices   	(list Points
+			    (1031, 549)
+			    (622, 817))
+			line_style 	0)
 		    (object ModVisView "" @346
 			stereotype 	TRUE
 			line_color 	3342489
-			quidu      	"5820F604030F"
+			quidu      	"58218A710386"
 			client     	@340
-			supplier   	@345
+			supplier   	@344
 			vertices   	(list Points
-			    (1029, 521)
-			    (582, 798))
+			    (1167, 549)
+			    (1167, 812))
 			line_style 	0)
 		    (object ModVisView "" @347
 			stereotype 	TRUE
 			line_color 	3342489
-			quidu      	"5820F63D0117"
-			client     	@345
+			quidu      	"58218A740333"
+			client     	@340
 			supplier   	@341
 			vertices   	(list Points
-			    (607, 874)
-			    (876, 875))
-			line_style 	0)
-		    (object ModVisView "" @348
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5820F65D0027"
-			client     	@342
-			supplier   	@340
-			vertices   	(list Points
-			    (1770, 792)
-			    (1300, 521))
-			line_style 	0)
-		    (object ModVisView "" @349
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5820F66102EF"
-			client     	@345
-			supplier   	@340
-			vertices   	(list Points
-			    (582, 798)
-			    (1029, 521))
-			line_style 	0)
-		    (object ModVisView "" @350
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5820F3DD023F"
-			client     	@342
-			supplier   	@341
-			vertices   	(list Points
-			    (1756, 872)
-			    (1443, 871))
-			line_style 	0)
-		    (object ModVisView "" @351
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5820F3E50287"
-			client     	@341
-			supplier   	@340
-			vertices   	(list Points
-			    (1161, 795)
-			    (1162, 521))
+			    (1289, 549)
+			    (1701, 817))
 			line_style 	0))))
 	category   	"Logical View"
 	quidu      	"580E450F0244")
@@ -8005,6 +7990,11 @@
 		characteristics 	""
 		scheduling 	"Preemptive"
 		processes  	(list processes))
+	    (object Processor "Server"
+		quid       	"58218BEF03E1"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
 	    (object Device "Camera"
 		quid       	"5820F7330305"
 		characteristics 	"")
@@ -8029,6 +8019,11 @@
 			quid       	"5821021401E0"
 			supplier   	"Controller."
 			quidu      	"5820FB2602FD"
+			supplier_is_device 	FALSE)
+		    (object Connection_Relationship
+			quid       	"58218C6501BE"
+			supplier   	"Server"
+			quidu      	"58218BEF03E1"
 			supplier_is_device 	FALSE))
 		characteristics 	"")
 	    (object Process_Diagram "Deployment View"
@@ -8038,10 +8033,107 @@
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	247
+		origin_y   	1178
 		items      	(list diagram_item_list
-		    (object NoteView @352
-			location   	(1380, 1292)
+		    (object NoteView @348
+			location   	(836, 542)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@348
+			    location   	(611, 448)
+			    fill_color 	13434879
+			    nlines     	3
+			    max_width  	415
+			    justify    	1
+			    label      	"<<Application>> Client")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	475
+			height     	200)
+		    (object DeviceView "Android device." @349
+			location   	(880, 743)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@349
+			    location   	(347, 353)
+			    nlines     	2
+			    max_width  	994
+			    justify    	0
+			    label      	"Android device.")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5820F9F102ED"
+			width      	1069
+			height     	850
+			annotation 	0)
+		    (object NoteView @350
+			location   	(841, 784)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@350
+			    location   	(622, 684)
+			    fill_color 	13434879
+			    nlines     	4
+			    max_width  	403
+			    justify    	1
+			    label      	"Camera")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	463
+			height     	212)
+		    (object NoteView @351
+			location   	(841, 1043)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@351
+			    location   	(628, 946)
+			    fill_color 	13434879
+			    nlines     	3
+			    max_width  	390
+			    justify    	1
+			    label      	"Gallery")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	450
+			height     	207)
+		    (object ProcessorView "Server" @352
+			location   	(2429, 745)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -8054,18 +8146,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@352
-			    location   	(1155, 1198)
-			    fill_color 	13434879
-			    nlines     	3
-			    max_width  	415
-			    justify    	1
-			    label      	"<<Application>> Client")
+			    location   	(1915, 367)
+			    nlines     	2
+			    max_width  	956
+			    justify    	0
+			    label      	"Server")
+			icon_style 	"Icon"
 			line_color 	3342489
-			fill_color 	13434879
-			width      	475
-			height     	200)
-		    (object DeviceView "Android device." @353
-			location   	(1411, 1173)
+			quidu      	"58218BEF03E1"
+			width      	1031
+			height     	825
+			annotation 	0)
+		    (object NoteView @353
+			location   	(2408, 553)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -8078,369 +8171,25 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@353
-			    location   	(1116, 970)
-			    nlines     	2
-			    max_width  	519
-			    justify    	0
-			    label      	"Android device.")
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"5820F9F102ED"
-			width      	594
-			height     	475
-			annotation 	0)
-		    (object ProcessorView "Camera." @354
-			location   	(2447, 1172)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@354
-			    location   	(2146, 966)
-			    nlines     	2
-			    max_width  	531
-			    justify    	0
-			    label      	"Camera.")
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"5820FA320125"
-			width      	606
-			height     	481
-			annotation 	0)
-		    (object ProcessorView "Gallery." @355
-			location   	(455, 1173)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@355
-			    location   	(154, 967)
-			    nlines     	2
-			    max_width  	531
-			    justify    	0
-			    label      	"Gallery.")
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"5820FA4B0295"
-			width      	606
-			height     	482
-			annotation 	0)
-		    (object NoteView @356
-			location   	(2414, 1281)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@356
-			    location   	(2195, 1181)
+			    location   	(2174, 441)
 			    fill_color 	13434879
 			    nlines     	4
-			    max_width  	403
+			    max_width  	433
 			    justify    	1
-			    label      	"Camera")
+			    label      	"InternetService (Яндекс.Картинки)")
 			line_color 	3342489
 			fill_color 	13434879
-			width      	463
-			height     	212)
-		    (object NoteView @357
-			location   	(426, 1292)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@357
-			    location   	(213, 1195)
-			    fill_color 	13434879
-			    nlines     	3
-			    max_width  	390
-			    justify    	1
-			    label      	"Gallery")
-			line_color 	3342489
-			fill_color 	13434879
-			width      	450
-			height     	207)
-		    (object ProcessorView "Controller." @358
-			location   	(1413, 492)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@358
-			    location   	(1115, 286)
-			    nlines     	2
-			    max_width  	525
-			    justify    	0
-			    label      	"Controller.")
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"5820FB2602FD"
-			width      	600
-			height     	482
-			annotation 	0)
-		    (object NoteView @359
-			location   	(1389, 608)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@359
-			    location   	(1182, 517)
-			    fill_color 	13434879
-			    nlines     	3
-			    max_width  	378
-			    justify    	1
-			    label      	"Controller")
-			line_color 	3342489
-			fill_color 	13434879
-			width      	438
-			height     	194)
-		    (object ConnectionView "" @360
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@360
-			    location   	(921, 1173)
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"")
-			stereotype 	(object SegLabel @361
-			    Parent_View 	@360
-			    location   	(957, 1113)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				charSet    	204
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    anchor     	10
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"<<use>>"
-			    pctDist    	0.594315
-			    height     	60
-			    orientation 	0)
-			line_color 	3342489
-			quidu      	"582101D80207"
-			client     	@355
-			supplier   	@353
-			vertices   	(list Points
-			    (727, 1173)
-			    (1114, 1173))
-			line_style 	0)
-		    (object ConnectionView "" @362
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@362
-			    location   	(1911, 1172)
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"")
-			stereotype 	(object SegLabel @363
-			    Parent_View 	@362
-			    location   	(1923, 1115)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				charSet    	204
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    anchor     	10
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"<<use>>"
-			    pctDist    	0.527030
-			    height     	57
-			    orientation 	0)
-			line_color 	3342489
-			quidu      	"5820FA8B030F"
-			client     	@353
-			supplier   	@354
-			vertices   	(list Points
-			    (1677, 1173)
-			    (2144, 1172))
-			line_style 	0)
-		    (object ConnectionView "" @364
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@364
-			    location   	(920, 833)
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"")
-			stereotype 	(object SegLabel @365
-			    Parent_View 	@364
-			    location   	(817, 775)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				charSet    	204
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    anchor     	10
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"<<use>>"
-			    pctDist    	0.500000
-			    height     	120
-			    orientation 	0)
-			line_color 	3342489
-			quidu      	"582102100340"
-			client     	@355
-			supplier   	@358
-			vertices   	(list Points
-			    (727, 1173)
-			    (1113, 492))
-			line_style 	0)
-		    (object ConnectionView "" @366
+			width      	493
+			height     	237)
+		    (object ConnectionView "" @354
 			stereotype 	TRUE
 			line_color 	3342489
-			quidu      	"5821021401E0"
-			client     	@353
-			supplier   	@358
+			quidu      	"58218C6501BE"
+			client     	@349
+			supplier   	@352
 			vertices   	(list Points
-			    (1411, 951)
-			    (1413, 733))
-			line_style 	0)
-		    (object ConnectionView "" @367
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    charSet    	204
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@367
-			    location   	(1913, 832)
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"")
-			stereotype 	(object SegLabel @368
-			    Parent_View 	@367
-			    location   	(2004, 783)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				charSet    	204
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    anchor     	10
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"<<use>>"
-			    pctDist    	0.487095
-			    height     	103
-			    orientation 	1)
-			line_color 	3342489
-			quidu      	"5821021702FF"
-			client     	@354
-			supplier   	@358
-			vertices   	(list Points
-			    (2144, 1172)
-			    (1682, 492))
+			    (1383, 743)
+			    (1914, 745))
 			line_style 	0)))))
     properties 	(object Properties
 	attributes 	(list Attribute_Set
@@ -10063,7 +9812,7 @@
 		    (object Attribute
 			tool       	"Java"
 			name       	"ClassPath"
-			value      	"")
+			value      	";C:\\Program Files\\Java\\jdk1.8.0_111\\jre\\lib\\rt.jar;C:\\Program Files\\Java\\jdk1.8.0_111\\lib\\dt.jar;C:\\Program Files\\Java\\jdk1.8.0_111\\lib\\tools.jar")
 		    (object Attribute
 			tool       	"Java"
 			name       	"ReferenceClasspath"
