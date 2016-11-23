@@ -12,31 +12,14 @@
     tools:context="com.example.hp.yourface.MainActivity">
 
     <Button
-        android:text="Create photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Create"
-        android:minWidth="150dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
         android:text="Load photo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Load"
         android:minWidth="150dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Info"
-        android:minWidth="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true"
+        android:minHeight="40dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -53,5 +36,26 @@
         android:id="@+id/imageView5"
         android:layout_below="@+id/imageView4"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Info"
+        android:minWidth="60dp"
+        android:minHeight="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp" />
+
+    <Button
+        android:text="Create photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Create"
+        android:minWidth="150dp"
+        android:minHeight="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

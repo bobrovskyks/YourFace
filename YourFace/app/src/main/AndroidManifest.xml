@@ -3,6 +3,8 @@
     package="com.example.hp.yourface">
     <uses-feature android:name="android.hardware.camera"
         android:required="true"> </uses-feature>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,5 +23,7 @@
             android:label="@string/app_name" >
         </activity>
     </application>
-
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="face" />
 </manifest>
