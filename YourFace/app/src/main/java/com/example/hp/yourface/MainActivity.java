@@ -24,12 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     final int REQUEST_CODE_PHOTO = 1;
     final int TYPE_PHOTO = 1;
-    File directory;
     Button CreateButton;
     Button LoadButton;
     Button InfoButton;
     ImageView ivPhoto;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         CreateButton = (Button) findViewById(R.id.Create);
         LoadButton = (Button) findViewById(R.id.Load);
         InfoButton = (Button) findViewById(R.id.Info);
-        createDirectory();
-
         CreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 toastImage.addView(imageView, 0);
                 toast.show();
                 Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+               // takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, generateFileUri(TYPE_PHOTO));
                 if(takePictureIntent.resolveActivity(getPackageManager())!=null) {
                     startActivityForResult(takePictureIntent, REQUEST_CODE_PHOTO);
-                }
+                 }
             }
         });
 
@@ -89,19 +86,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent data) {
-        if (requestCode == REQUEST_CODE_PHOTO && resultCode == RESULT_OK) {
+       if (requestCode == REQUEST_CODE_PHOTO && resultCode == RESULT_OK) {
             Intent intentTwoActivity = new Intent(MainActivity.this, Main2Activity.class);
             intentTwoActivity.putExtra("data", data.getExtras());
             startActivity(intentTwoActivity);
         }
-    }
-
-    private void createDirectory() {
-        directory = new File(
-                Environment
-                        .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-                "MyFolder");
-        if (!directory.exists())
-            directory.mkdirs();
     }
 }
