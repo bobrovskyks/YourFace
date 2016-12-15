@@ -2,15 +2,16 @@ package com.example.hp.yourface;
 
 import android.graphics.Bitmap;
 
-public class Content {
-    Search search = new Search();
-    Internet internet = new Internet();
+public class Content { // facade
+    SearchController SearchController_ = new SearchController();
 
-    int[] PictureColor(Bitmap _bitmap) {
-        return search.averageARGB(_bitmap);
+    public String InternetSearch(Bitmap bitmap_) {
+        SearchController_.setStrategy(new InternetSearch());
+        return (SearchController_.executeStrategy(bitmap_));
     }
 
-    boolean CheckInternet() {
-        return internet.isOnline();
+    public String GallerySearch(Bitmap bitmap_) {
+        SearchController_.setStrategy(new GallerySearch());
+        return (SearchController_.executeStrategy(bitmap_));
     }
 }

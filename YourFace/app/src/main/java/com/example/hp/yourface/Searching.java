@@ -1,4 +1,7 @@
 package com.example.hp.yourface;
 
-public interface Searching {
+import android.graphics.Bitmap;
+
+public interface Searching { // interface
+    String Search(Bitmap bitmap_);
 }

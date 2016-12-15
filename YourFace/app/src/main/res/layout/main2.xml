@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hp.yourface.Main2Activity"
+    tools:context="com.example.hp.yourface.SecondWindow"
     android:background="@color/colorPrimary">
 
     <ImageView
