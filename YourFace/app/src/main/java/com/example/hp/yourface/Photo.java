@@ -1,23 +1,23 @@
 package com.example.hp.yourface;
 
 public class Photo {
-    String PhotoID;
-    String Date;
-    Connecting StrategyC;
+    String photoID;
+    String date;
+    Connecting strategyC;
 
     public void setStrategy(Connecting strategy) { // set strategy
-        StrategyC = strategy;
+        strategyC = strategy;
     }
 
     public void executeStrategy() {
-        StrategyC.Connect();
+        strategyC.connect();
     }
 
-    public String GetPhotoID() {
-        return this.PhotoID;
+    public String getPhotoID() {
+        return this.photoID;
     }
 
-    public String GetPhotoDate() {
-        return this.Date;
+    public String getPhotoDate() {
+        return this.date;
     }
 }

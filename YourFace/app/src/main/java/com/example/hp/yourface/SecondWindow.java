@@ -31,7 +31,7 @@ import java.io.FileOutputStream;
 public class SecondWindow extends AppCompatActivity { // the second window in the app
     static final int REQUEST_CODE_PHOTO = 1;
     final int TYPE_PHOTO = 1;
-    Button InternetButton, GalleryButton, SaveButton;
+    Button internetButton, galleryButton, saveButton;
     ImageView result;
     File directory;
     public Bitmap imageBitmap;
@@ -44,9 +44,9 @@ public class SecondWindow extends AppCompatActivity { // the second window in th
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main2);
         createDirectory();
-        InternetButton = (Button) findViewById(R.id.searchinternet);
-        SaveButton = (Button) findViewById(R.id.save);
-        GalleryButton = (Button) findViewById(R.id.searchgallery);
+        internetButton = (Button) findViewById(R.id.searchinternet);
+        saveButton = (Button) findViewById(R.id.save);
+        galleryButton = (Button) findViewById(R.id.searchgallery);
         result = (ImageView) findViewById(R.id.imageView2);
         Bundle extras = getIntent().getExtras().getBundle("data");
         imageBitmap = (Bitmap) extras.get("data");
@@ -80,24 +80,24 @@ public class SecondWindow extends AppCompatActivity { // the second window in th
         }
         result.setImageDrawable(new BitmapDrawable(getResources(), tempBitmap));
 
-        InternetButton.setOnClickListener(new View.OnClickListener() {
+        internetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // when you click on the search button on the Internet
                 switch (count) {
                     case 0: {
-                        ToastShow("No face in the photo(");
+                        toastShow("No face in the photo(");
                         break;
                     }
                     case 1: {
-                        SavePicture(CreateSmallBitmap(imageBitmap));
-                        ToastShow("Browser running...");
+                        SavePicture(createSmallBitmap(imageBitmap));
+                        toastShow("Browser running...");
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.by/images/"));
                         startActivity(intent);
                         break;
                     }
                     default: {
                         SavePicture(imageBitmap);
-                        ToastShow("Browser running...");
+                        toastShow("Browser running...");
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.by/images/"));
                         startActivity(intent);
                         break;
@@ -106,37 +106,37 @@ public class SecondWindow extends AppCompatActivity { // the second window in th
             }
         });
 
-        GalleryButton.setOnClickListener(new View.OnClickListener() {
+        galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // when you click on the search button in the gallery
-                String path = content.GallerySearch(imageBitmap);
+                String path = content.gallerySearch(imageBitmap);
                 if (path != null) {
                     result.setImageBitmap(BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/YourFace/" + path));
                 } else {
-                    ToastShow("No similar(");
+                    toastShow("No similar(");
                 }
             }
         });
 
-        SaveButton.setOnClickListener(new View.OnClickListener() {
+        saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // when you click on the save button
                 if (count == 1) {
-                    ToastShow("Save...");
-                    SavePicture(CreateSmallBitmap(imageBitmap));
+                    toastShow("Save...");
+                    SavePicture(createSmallBitmap(imageBitmap));
                 }
                 if (count == 0) {
-                    ToastShow("No face in the photo(");
+                    toastShow("No face in the photo(");
                 }
                 if (count > 1) {
-                    ToastShow("More than one person in the photo. Take a picture again)");
+                    toastShow("More than one person in the photo. Take a picture again)");
                 }
             }
         });
 
     }
 
-    Bitmap CreateSmallBitmap(Bitmap _b) { // create a small bitmap
+    Bitmap createSmallBitmap(Bitmap _b) { // create a small bitmap
         Bitmap bmp = Bitmap.createBitmap(_b, (int) x1, (int) y1, (int) (x2 - x1), (int) (y2 - y1));
         bmp.setDensity(Bitmap.DENSITY_NONE);
         return bmp;
@@ -171,7 +171,7 @@ public class SecondWindow extends AppCompatActivity { // the second window in th
         return "";
     }
 
-    public void ToastShow(String text_) { // display toast
+    public void toastShow(String text_) { // display toast
         Toast toast = Toast.makeText(SecondWindow.this, text_, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();

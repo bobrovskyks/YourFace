@@ -1,22 +1,22 @@
 package com.example.hp.yourface;
 
 public class User { // сlass user
-    String Name;
-    String Password;
+    String name;
+    String password;
 
-    void SetName(String _name) {
-        this.Name = _name;
+    void setName(String _name) {
+        this.name = _name;
     }
 
-    void SetPassword(String _password) {
-        this.Password = _password;
+    void setPassword(String _password) {
+        this.password = _password;
     }
 
-    String GetName() {
-        return this.Name;
+    String getName() {
+        return this.name;
     }
 
-    String GetPassword() {
-        return this.Password;
+    String getPassword() {
+        return this.password;
     }
 }

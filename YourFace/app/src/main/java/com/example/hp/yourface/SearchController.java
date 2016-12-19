@@ -3,13 +3,13 @@ package com.example.hp.yourface;
 import android.graphics.Bitmap;
 
 public class SearchController { // Class control search
-    Searching Strategy;
+    Searching strategy;
 
-    public void setStrategy(Searching strategy) {
-        Strategy = strategy;
+    public void setStrategy(Searching strategy_) {
+        strategy = strategy_;
     } // set strategy
 
     public String executeStrategy(Bitmap bitmap_) { // execution
-        return (Strategy.Search(bitmap_));
+        return (strategy.search(bitmap_));
     }
 }

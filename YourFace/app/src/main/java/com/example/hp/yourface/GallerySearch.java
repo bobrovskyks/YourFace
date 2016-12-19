@@ -13,7 +13,7 @@ public class GallerySearch implements Searching { // the search algorithm in the
     public String path = null;
     static int percent = 26; // matching percentage
 
-    public String Search(Bitmap bitmap_) {
+    public String search(Bitmap bitmap_) {
         File[] fList;
         File F = new File(Environment.getExternalStorageDirectory() + "/YourFace");
         fList = F.listFiles();

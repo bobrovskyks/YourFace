@@ -15,8 +15,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {  // the application's main window
 
     final int REQUEST_CODE_PHOTO = 1;
-    Button CreateButton;
-    Button InfoButton;
+    Button сreateButton;
+    Button infoButton;
     Content content = new Content();
     VersionApp versionApp = new AdapterInternetConnect();
 
@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {  // the application's main
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        CreateButton = (Button) findViewById(R.id.Create);
-        InfoButton = (Button) findViewById(R.id.Info);
-        CreateButton.setOnClickListener(new View.OnClickListener() {
+        сreateButton = (Button) findViewById(R.id.Create);
+        infoButton = (Button) findViewById(R.id.Info);
+        сreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // when you press the camera button
-                ToastShow("Camera running...", R.drawable.camera, 0);
+                toastShow("Camera running...", R.drawable.camera, 0);
                 Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(takePictureIntent, REQUEST_CODE_PHOTO);
@@ -37,15 +37,15 @@ public class MainActivity extends AppCompatActivity {  // the application's main
             }
         });
 
-        InfoButton.setOnClickListener(new View.OnClickListener() {
+        infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // clicking on the information button
-                ToastShow(versionApp.GetVersion(), R.drawable.info, 1);
+                toastShow(versionApp.getVersion(), R.drawable.info, 1);
             }
         });
     }
 
-    public void ToastShow(String text_, int res_, int flag_) { // display toast
+    public void toastShow(String text_, int res_, int flag_) { // display toast
         Toast toast;
         if (flag_ == 0) {
             toast = Toast.makeText(MainActivity.this, text_, Toast.LENGTH_SHORT);
